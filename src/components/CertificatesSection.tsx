@@ -30,21 +30,39 @@ const CertificatesSection = () => {
     },
     {
       id: 4,
-      src: "/api/placeholder/400/600",
-      alt: "Сертификат 4",
-      title: "Сертификат 4"
+      src: "/lovable-uploads/e62af0fa-9f72-4cbf-acb8-0ed4510c78e7.png",
+      alt: "Сертификат по теории и практике консультирования",
+      title: "Теория и практика консультирования"
     },
     {
       id: 5,
-      src: "/api/placeholder/400/600",
-      alt: "Сертификат 5",
-      title: "Сертификат 5"
+      src: "/lovable-uploads/1d0ffece-35d2-4bff-8c73-32f8ea183771.png",
+      alt: "Сертификат по работе с клиентскими запросами",
+      title: "Работа с клиентскими запросами"
     },
     {
       id: 6,
-      src: "/api/placeholder/400/600",
-      alt: "Сертификат 6",
-      title: "Сертификат 6"
+      src: "/lovable-uploads/878b33fb-9306-4890-a7a6-124aa00df335.png",
+      alt: "Университетский сертификат по консультированию",
+      title: "Университетская квалификация"
+    },
+    {
+      id: 7,
+      src: "/lovable-uploads/12352dfd-e784-432d-a9a6-1f09f22051ef.png",
+      alt: "Сертифицированный мастер-гипнотерапевт",
+      title: "Certified Master Hypnotherapist"
+    },
+    {
+      id: 8,
+      src: "/lovable-uploads/99bd742e-105f-415f-99a9-35c666532d63.png",
+      alt: "Холистик майнд практик",
+      title: "Holistic Mind Practioner"
+    },
+    {
+      id: 9,
+      src: "/lovable-uploads/15de8426-406e-4acd-956e-63790d34ca2b.png",
+      alt: "Холистик майнд терапия",
+      title: "Holistic Mind Therapy Practitioner"
     }
   ];
 
