@@ -22,15 +22,7 @@ const App = () => {
       document.head.appendChild(script);
       
       script.onload = () => {
-        window.Koalendar('widget', {
-          "url": "https://koalendar.com/e/diagnostika",
-          "text": "Запись на встречу",
-          "shape": "rounded-full",
-          "backgroundColor": "#4A90A4",
-          "textColor": "#FFFFFF",
-          "position": "bottom-right",
-          "icon": "calendar"
-        });
+        window.Koalendar('init');
       };
     }
   }, []);

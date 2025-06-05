@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -28,12 +29,6 @@ const ContactSection = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
-  };
-
-  const openSchedulingWidget = () => {
-    if (window.Koalendar) {
-      window.Koalendar('open');
-    }
   };
 
   return (
@@ -142,13 +137,14 @@ const ContactSection = () => {
                   <p className="text-warm-text/80 mb-6">
                     Выберите удобное время для личной консультации
                   </p>
-                  <Button 
-                    onClick={openSchedulingWidget}
-                    className="bg-warm-accent hover:bg-warm-accent/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105"
+                  <a 
+                    href="https://koalendar.com/e/diagnostika" 
+                    data-koalendar-widget
+                    className="inline-flex items-center bg-warm-accent hover:bg-warm-accent/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105"
                   >
                     <Calendar className="w-5 h-5 mr-2" />
-                    Записаться на встречу
-                  </Button>
+                    Запланировать встречу
+                  </a>
                 </div>
               </CardContent>
             </Card>
