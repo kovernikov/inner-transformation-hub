@@ -13,7 +13,7 @@ const ProofSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="py-8 bg-white">
+    <section className="py-8 bg-transparent relative z-10">
       <div className="container mx-auto px-4">
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
           <div className="text-center">

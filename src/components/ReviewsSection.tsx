@@ -41,18 +41,7 @@ const ReviewsSection = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-warm-beige via-white to-warm-green/10 overflow-hidden">
-      {/* Плавный переход сверху */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-warm-beige/80 to-transparent z-10"></div>
-      
-      {/* Декоративные элементы для глубины */}
-      <div className="absolute top-20 left-10 w-40 h-40 bg-warm-accent/5 rounded-full blur-2xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-warm-blue/10 rounded-full blur-xl animate-float"></div>
-      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-warm-green/10 rounded-full blur-lg animate-float" style={{animationDelay: '1s'}}></div>
-
-      {/* Плавный переход снизу */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white z-10"></div>
-
+    <section className="relative py-16 bg-transparent overflow-hidden">
       <div className="container mx-auto px-4 relative z-20">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
@@ -78,7 +67,7 @@ const ReviewsSection = () => {
                     className="h-full"
                     style={{ animationDelay: `${index * 0.2}s` }}
                   >
-                    <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-3xl group h-full">
+                    <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-3xl group h-full">
                       <div className="relative overflow-hidden">
                         <video 
                           className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"

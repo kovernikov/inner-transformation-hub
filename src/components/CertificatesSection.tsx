@@ -49,18 +49,7 @@ const CertificatesSection = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white via-warm-green/5 to-warm-beige/30 overflow-hidden">
-      {/* Плавный переход сверху */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white/80 to-transparent z-10"></div>
-      
-      {/* Декоративные элементы */}
-      <div className="absolute top-32 right-20 w-32 h-32 bg-warm-accent/5 rounded-full blur-2xl animate-pulse"></div>
-      <div className="absolute bottom-40 left-16 w-28 h-28 bg-warm-blue/10 rounded-full blur-xl animate-float" style={{animationDelay: '1.5s'}}></div>
-      <div className="absolute top-1/2 right-1/3 w-20 h-20 bg-warm-green/15 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
-
-      {/* Плавный переход снизу */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-warm-beige/50 z-10"></div>
-
+    <section className="relative py-16 bg-transparent overflow-hidden">
       <div className="container mx-auto px-4 relative z-20">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
@@ -86,7 +75,7 @@ const CertificatesSection = () => {
                     className="h-full"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl group h-full">
+                    <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl group h-full">
                       <div className="relative overflow-hidden">
                         <img 
                           src={cert.src}
