@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Carousel,
@@ -39,6 +38,84 @@ const ReviewsSection = () => {
       name: "Отзыв клиента",
       description: "Трансформация личности и мышления...",
       videoId: "qQ1Rf37lH8M"
+    },
+    {
+      id: 6,
+      name: "Отзыв клиента",
+      description: "Новый взгляд на жизнь...",
+      videoId: "01351eHikIU"
+    },
+    {
+      id: 7,
+      name: "Отзыв клиента",
+      description: "Внутренние изменения и рост...",
+      videoId: "YiS2cpkapYI"
+    },
+    {
+      id: 8,
+      name: "Отзыв клиента",
+      description: "Работа над собой и результаты...",
+      videoId: "7FIa1FbGOFM"
+    },
+    {
+      id: 9,
+      name: "Отзыв клиента",
+      description: "Преодоление внутренних барьеров...",
+      videoId: "qy0QAH4jX5w"
+    },
+    {
+      id: 10,
+      name: "Отзыв клиента",
+      description: "Путь к пониманию себя...",
+      videoId: "HuGyUHG39EI"
+    },
+    {
+      id: 11,
+      name: "Отзыв клиента",
+      description: "Глубокие внутренние изменения...",
+      videoId: "zngxwUcxvD0"
+    },
+    {
+      id: 12,
+      name: "Отзыв клиента",
+      description: "Новое качество жизни...",
+      videoId: "mr33MCbFTFU"
+    },
+    {
+      id: 13,
+      name: "Отзыв клиента",
+      description: "Освобождение от старых паттернов...",
+      videoId: "OR8PW8qo_Lw"
+    },
+    {
+      id: 14,
+      name: "Отзыв клиента",
+      description: "Кардинальная перестройка мышления...",
+      videoId: "Mrh7RNQKxmc"
+    },
+    {
+      id: 15,
+      name: "Отзыв клиента",
+      description: "Открытие новых возможностей...",
+      videoId: "OJDMXFDUwqw"
+    },
+    {
+      id: 16,
+      name: "Отзыв клиента",
+      description: "Глубокая трансформация личности...",
+      videoId: "pFakUS5jbbs"
+    },
+    {
+      id: 17,
+      name: "Отзыв клиента",
+      description: "Изменение отношения к жизни...",
+      videoId: "Yq4_GEV_-YQ"
+    },
+    {
+      id: 18,
+      name: "Отзыв клиента",
+      description: "Полная перезагрузка сознания...",
+      videoId: "5BVLq1r9OIQ"
     }
   ];
 
