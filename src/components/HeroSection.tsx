@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -13,7 +14,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 animate-scale-in">
             <img 
-              src="https://cdn.openai.com/chat-assets/user-uploads/f7d7f514-b23f-4f8a-867b-c08730a60a4b/file-BMiLV5RRgKmoFosGquGeTE.jpg"
+              src="https://instagram.fprg6-1.fna.fbcdn.net/v/t51.2885-19/483190743_9014333672006216_2206919393066273092_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_ht=instagram.fprg6-1.fna.fbcdn.net&_nc_cat=108&_nc_oc=Q6cZ2QFTBXOLbE3R5mPogEIXXsiT2q5Yr6cZXDb4-4m69rxlRVjq84M5CrLQ_pWwLJrsp-aBvMZhTOt_Hti52g9fYVPs&_nc_ohc=7_ZO92WAlK0Q7kNvwGiWA_J&_nc_gid=CLG6pqKFUui1MkeGzUkoLg&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfPFCn3cJ56ybUsuR6cR5xMNE7Tg5iEIjL9KAxLuulW2Iw&oe=6847A0C4&_nc_sid=7a9f4b"
               alt="Алексей Коверников"
               className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/80 transition-all duration-500 hover:scale-110 hover:shadow-3xl"
             />
