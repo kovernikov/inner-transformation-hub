@@ -143,7 +143,7 @@ const ReviewsSection = () => {
               {reviews.map((review, index) => (
                 <CarouselItem key={review.id} className="pl-4 md:basis-1/2 lg:basis-1/2">
                   <div className="h-full">
-                    <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-3xl group h-full">
+                    <div className="relative bg-white/90 backdrop-blur-sm shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-3xl group h-full">
                       <div className="relative overflow-hidden">
                         <iframe
                           className="w-full h-64 md:h-80"
