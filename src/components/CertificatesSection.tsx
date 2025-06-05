@@ -49,8 +49,8 @@ const CertificatesSection = () => {
   ];
 
   return (
-    <section className="relative py-16 bg-transparent overflow-hidden">
-      <div className="container mx-auto px-4 relative z-20">
+    <section className="py-16 bg-transparent">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
             Сертификаты и квалификация
@@ -71,10 +71,7 @@ const CertificatesSection = () => {
             <CarouselContent className="-ml-4">
               {certificates.map((cert, index) => (
                 <CarouselItem key={cert.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div 
-                    className="h-full"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
+                  <div className="h-full">
                     <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl group h-full">
                       <div className="relative overflow-hidden">
                         <img 

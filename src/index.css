@@ -43,12 +43,8 @@
   }
 
   body {
-    @apply text-warm-text font-sans;
+    @apply bg-warm-beige text-warm-text font-sans;
     scroll-behavior: smooth;
-    position: relative;
-    background: #f8f9fa;
-    min-height: 100vh;
-    overflow-x: hidden;
   }
 }
 
@@ -62,37 +58,6 @@
   .animate-on-scroll.animate {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  .text-shadow {
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .text-shadow-strong {
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  }
-
-  .parallax-element {
-    transition: transform 0.1s ease-out;
-  }
-
-  .section-transition {
-    position: relative;
-  }
-
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .gradient-text {
-    background: linear-gradient(135deg, #4A90A4, #2D3748, #4A90A4);
-    background-size: 200% 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient-shift 6s ease infinite;
   }
 }
 
@@ -108,14 +73,8 @@
   }
 }
 
-/* Улучшенная анимация скролла */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
-}
-
-/* Плавные переходы для всех интерактивных элементов */
-* {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
