@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { Send } from 'lucide-react';
+import { Send, Calendar } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -28,6 +29,12 @@ const ContactSection = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  const openSchedulingWidget = () => {
+    if (window.Koalendar) {
+      window.Koalendar('open');
+    }
   };
 
   return (
@@ -96,9 +103,10 @@ const ContactSection = () => {
             </CardContent>
           </Card>
 
-          {/* Telegram */}
-          <div className="flex flex-col justify-center items-center animate-on-scroll" style={{ animationDelay: '0.3s' }}>
-            <Card className="w-full shadow-2xl border-0 bg-warm-accent text-white">
+          {/* Telegram и Запись на встречу */}
+          <div className="space-y-6 animate-on-scroll" style={{ animationDelay: '0.3s' }}>
+            {/* Telegram */}
+            <Card className="shadow-2xl border-0 bg-warm-accent text-white">
               <CardContent className="p-8 text-center">
                 <div className="mb-6">
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -118,6 +126,30 @@ const ContactSection = () => {
                   >
                     @kovernikov_alexey
                   </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Запись на встречу */}
+            <Card className="shadow-2xl border-0 bg-warm-green text-warm-text">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <div className="w-20 h-20 bg-warm-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Calendar className="w-10 h-10 text-warm-accent" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">
+                    Запись на встречу
+                  </h3>
+                  <p className="text-warm-text/80 mb-6">
+                    Выберите удобное время для личной консультации
+                  </p>
+                  <Button 
+                    onClick={openSchedulingWidget}
+                    className="bg-warm-accent hover:bg-warm-accent/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105"
+                  >
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Записаться на встречу
+                  </Button>
                 </div>
               </CardContent>
             </Card>
