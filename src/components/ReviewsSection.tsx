@@ -1,16 +1,59 @@
+
 import React from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 const ReviewsSection = () => {
+  const reviews = [
+    {
+      id: 1,
+      name: "Мария, 34 года",
+      description: "Программа 14 недель полностью изменила мою жизнь...",
+      videoSrc: "video1.mp4",
+      poster: "/api/placeholder/600/400"
+    },
+    {
+      id: 2,
+      name: "Дмитрий, 41 год",
+      description: "Перепрошивка — это не просто терапия, это новая жизнь...",
+      videoSrc: "video2.mp4",
+      poster: "/api/placeholder/600/400"
+    },
+    {
+      id: 3,
+      name: "Анна, 28 лет",
+      description: "Благодаря работе с Алексеем я наконец-то поняла себя...",
+      videoSrc: "video3.mp4",
+      poster: "/api/placeholder/600/400"
+    },
+    {
+      id: 4,
+      name: "Сергей, 45 лет",
+      description: "После сессий я стал совершенно другим человеком...",
+      videoSrc: "video4.mp4",
+      poster: "/api/placeholder/600/400"
+    }
+  ];
+
   return (
-    <section className="py-20 bg-gradient-to-b from-warm-green/10 via-warm-green/20 to-white relative overflow-hidden">
+    <section className="relative py-32 bg-gradient-to-b from-warm-beige via-white to-warm-green/10 overflow-hidden">
+      {/* Плавный переход сверху */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-warm-beige/80 to-transparent z-10"></div>
+      
       {/* Декоративные элементы для глубины */}
       <div className="absolute top-20 left-10 w-40 h-40 bg-warm-accent/5 rounded-full blur-2xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-warm-blue/10 rounded-full blur-xl animate-float"></div>
+      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-warm-green/10 rounded-full blur-lg animate-float" style={{animationDelay: '1s'}}></div>
 
-      {/* Плавный переход */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-white z-10"></div>
+      {/* Плавный переход снизу */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white z-10"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-20">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
             Отзывы клиентов
@@ -20,48 +63,49 @@ const ReviewsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          <div className="animate-on-scroll">
-            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105">
-              <video 
-                className="w-full h-64 md:h-80 object-cover"
-                controls
-                poster="/api/placeholder/600/400"
-              >
-                <source src="video1.mp4" type="video/mp4" />
-                Ваш браузер не поддерживает видео.
-              </video>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-warm-text mb-2">
-                  Мария, 34 года
-                </h3>
-                <p className="text-warm-text/70">
-                  "Программа 14 недель полностью изменила мою жизнь..."
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="animate-on-scroll" style={{ animationDelay: '0.3s' }}>
-            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105">
-              <video 
-                className="w-full h-64 md:h-80 object-cover"
-                controls
-                poster="/api/placeholder/600/400"
-              >
-                <source src="video2.mp4" type="video/mp4" />
-                Ваш браузер не поддерживает видео.
-              </video>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-warm-text mb-2">
-                  Дмитрий, 41 год
-                </h3>
-                <p className="text-warm-text/70">
-                  "Перепрошивка — это не просто терапия, это новая жизнь..."
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-5xl mx-auto animate-on-scroll">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {reviews.map((review, index) => (
+                <CarouselItem key={review.id} className="pl-4 md:basis-1/2 lg:basis-1/2">
+                  <div 
+                    className="h-full"
+                    style={{ animationDelay: `${index * 0.2}s` }}
+                  >
+                    <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-3xl group h-full">
+                      <div className="relative overflow-hidden">
+                        <video 
+                          className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                          controls
+                          poster={review.poster}
+                        >
+                          <source src={review.videoSrc} type="video/mp4" />
+                          Ваш браузер не поддерживает видео.
+                        </video>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-semibold text-warm-text mb-3 group-hover:text-warm-accent transition-colors duration-300">
+                          {review.name}
+                        </h3>
+                        <p className="text-warm-text/70 leading-relaxed">
+                          {review.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-16 bg-white/90 hover:bg-white shadow-lg hover:shadow-xl transition-all duration-300" />
+            <CarouselNext className="hidden md:flex -right-16 bg-white/90 hover:bg-white shadow-lg hover:shadow-xl transition-all duration-300" />
+          </Carousel>
         </div>
       </div>
     </section>
