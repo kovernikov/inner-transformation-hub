@@ -45,6 +45,26 @@
   body {
     @apply bg-warm-beige text-warm-text font-sans;
     scroll-behavior: smooth;
+    background: linear-gradient(135deg, #F5F2E8 0%, #E8F4F8 25%, #F5F2E8 50%, #E8F5E8 75%, #F5F2E8 100%);
+    background-size: 400% 400%;
+    animation: gradient-shift 20s ease infinite;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(74, 144, 164, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(232, 245, 232, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(232, 244, 248, 0.04) 0%, transparent 50%),
+      linear-gradient(135deg, transparent 0%, rgba(74, 144, 164, 0.01) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: -1;
   }
 }
 
@@ -78,6 +98,21 @@
     background: linear-gradient(to bottom, transparent, rgba(245, 242, 232, 0.8));
     pointer-events: none;
   }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #4A90A4, #2D3748, #4A90A4);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 6s ease infinite;
+  }
 }
 
 /* Улучшенная анимация скролла */
@@ -105,6 +140,56 @@
   }
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
 .animate-float {
   animation: gentle-float 6s ease-in-out infinite;
+}
+
+.animate-gradient {
+  animation: gradient-shift 8s ease infinite;
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 4s ease-in-out infinite;
+}
+
+/* Улучшенные тени */
+.shadow-soft {
+  box-shadow: 0 10px 40px rgba(74, 144, 164, 0.1), 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-deep {
+  box-shadow: 0 20px 60px rgba(74, 144, 164, 0.15), 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Профессиональные hover эффекты */
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 80px rgba(74, 144, 164, 0.2), 0 10px 40px rgba(0, 0, 0, 0.1);
 }
