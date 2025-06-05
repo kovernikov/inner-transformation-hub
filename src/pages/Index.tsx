@@ -1,6 +1,9 @@
 
 import React, { useEffect } from 'react';
 import HeroSection from '../components/HeroSection';
+import AboutSection from '../components/AboutSection';
+import WhatIDoSection from '../components/WhatIDoSection';
+import HowIWorkSection from '../components/HowIWorkSection';
 import ProgramsSection from '../components/ProgramsSection';
 import ReviewsSection from '../components/ReviewsSection';
 import CertificatesSection from '../components/CertificatesSection';
@@ -32,6 +35,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      <AboutSection />
+      <WhatIDoSection />
+      <HowIWorkSection />
       <ProgramsSection />
       <ReviewsSection />
       <CertificatesSection />
