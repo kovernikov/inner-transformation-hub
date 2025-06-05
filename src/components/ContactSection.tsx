@@ -97,34 +97,8 @@ const ContactSection = () => {
             </CardContent>
           </Card>
 
-          {/* Telegram и Запись на встречу */}
+          {/* Запись на встречу */}
           <div className="space-y-6 animate-on-scroll" style={{ animationDelay: '0.3s' }}>
-            {/* Telegram */}
-            <Card className="shadow-2xl border-0 bg-warm-accent text-white">
-              <CardContent className="p-8 text-center">
-                <div className="mb-6">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Send className="w-10 h-10" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">
-                    Telegram
-                  </h3>
-                  <p className="text-white/90 mb-6">
-                    Быстрая связь для срочных вопросов и записи на консультацию
-                  </p>
-                  <a 
-                    href="https://t.me/kovernikov_alexey"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-white text-warm-accent px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors duration-300 transform hover:scale-105"
-                  >
-                    @kovernikov_alexey
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Запись на встречу */}
             <Card className="shadow-2xl border-0 bg-warm-green text-warm-text">
               <CardContent className="p-8 text-center">
                 <div className="mb-6">
