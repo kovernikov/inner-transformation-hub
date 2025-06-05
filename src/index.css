@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,7 +46,7 @@
     @apply text-warm-text font-sans;
     scroll-behavior: smooth;
     position: relative;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 30%, #e8f5e8 70%, #1a237e 100%);
+    background: #f8f9fa;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -128,147 +129,12 @@
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   }
 
-  /* Облака */
-  .cloud {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 100px;
-    opacity: 0.6;
-  }
-
-  .cloud::before,
-  .cloud::after {
-    content: '';
-    position: absolute;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 100px;
-  }
-
-  .cloud-1 {
-    width: 100px;
-    height: 40px;
-    top: 20%;
-    left: -100px;
-    animation: drift 25s infinite linear;
-  }
-
-  .cloud-1::before {
-    width: 50px;
-    height: 50px;
-    top: -25px;
-    left: 10px;
-  }
-
-  .cloud-1::after {
-    width: 60px;
-    height: 20px;
-    top: -10px;
-    right: 10px;
-  }
-
-  .cloud-2 {
-    width: 80px;
-    height: 30px;
-    top: 60%;
-    left: -80px;
-    animation: drift 35s infinite linear;
-    animation-delay: -10s;
-  }
-
-  .cloud-2::before {
-    width: 40px;
-    height: 40px;
-    top: -20px;
-    left: 15px;
-  }
-
-  .cloud-2::after {
-    width: 50px;
-    height: 15px;
-    top: -5px;
-    right: 15px;
-  }
-
-  .cloud-3 {
-    width: 120px;
-    height: 50px;
-    top: 40%;
-    left: -120px;
-    animation: drift 40s infinite linear;
-    animation-delay: -20s;
-  }
-
-  .cloud-3::before {
-    width: 60px;
-    height: 60px;
-    top: -30px;
-    left: 20px;
-  }
-
-  .cloud-3::after {
-    width: 70px;
-    height: 25px;
-    top: -12px;
-    right: 20px;
-  }
-
-  /* Звёзды */
-  .star {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    width: 2px;
-    height: 2px;
-    animation: twinkle 3s infinite;
-  }
-
-  .star-1 {
-    top: 15%;
-    left: 20%;
-    animation-delay: 0s;
-  }
-
-  .star-2 {
-    top: 25%;
-    right: 30%;
-    animation-delay: 1s;
-  }
-
-  .star-3 {
-    top: 35%;
-    left: 70%;
-    animation-delay: 2s;
-  }
-
-  .star-4 {
-    top: 45%;
-    right: 20%;
-    animation-delay: 0.5s;
-  }
-
-  .star-5 {
-    top: 55%;
-    left: 40%;
-    animation-delay: 1.5s;
-  }
-
   .parallax-element {
     transition: transform 0.1s ease-out;
   }
 
   .section-transition {
     position: relative;
-  }
-
-  .section-transition::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: linear-gradient(to bottom, transparent, rgba(248, 249, 250, 0.8));
-    pointer-events: none;
   }
 
   .glass-effect {
@@ -350,27 +216,6 @@
   }
   100% {
     box-shadow: 0 0 40px rgba(74, 144, 164, 0.15), 0 0 80px rgba(74, 144, 164, 0.08);
-  }
-}
-
-/* Анимации */
-@keyframes drift {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(100vw + 200px));
-  }
-}
-
-@keyframes twinkle {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.5);
   }
 }
 
