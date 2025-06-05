@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const WhatIDoSection = () => {
@@ -25,7 +24,7 @@ const WhatIDoSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-white to-warm-green/5 relative overflow-hidden">
+    <section className="py-20 bg-warm-beige relative overflow-hidden">
       {/* Декоративные элементы */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-warm-blue/10 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-warm-green/10 to-transparent rounded-full blur-2xl"></div>
