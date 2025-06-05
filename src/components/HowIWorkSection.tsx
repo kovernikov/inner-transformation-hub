@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const HowIWorkSection = () => {
@@ -17,16 +18,8 @@ const HowIWorkSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-transparent relative overflow-hidden">
-      {/* Декоративные элементы */}
-      <div className="absolute top-20 right-10 w-40 h-40 bg-warm-accent/10 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-10 left-20 w-32 h-32 bg-warm-blue/15 rounded-full blur-lg animate-float"></div>
-      <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-warm-green/20 rounded-full blur-md animate-float" style={{animationDelay: '1.5s'}}></div>
-
-      {/* Плавный переход к следующему блоку */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-white z-10"></div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-12 transform transition-all duration-500 hover:scale-105">

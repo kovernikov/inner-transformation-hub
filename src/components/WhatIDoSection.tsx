@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const WhatIDoSection = () => {
@@ -24,15 +25,8 @@ const WhatIDoSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-transparent relative overflow-hidden">
-      {/* Декоративные элементы */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-warm-blue/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-warm-green/10 to-transparent rounded-full blur-2xl"></div>
-
-      {/* Плавный переход к следующему блоку */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-warm-green/5 z-10"></div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-12 transform transition-all duration-500 hover:scale-105">
             Что я <span className="text-warm-accent relative inline-block">
