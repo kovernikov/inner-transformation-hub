@@ -15,13 +15,40 @@ const ContactSection = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Сообщение отправлено!",
-      description: "Алексей свяжется с вами в ближайшее время.",
-    });
-    setFormData({ name: '', email: '', message: '' });
+
+    try {
+      const response = await fetch('/send.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      const result = await response.text();
+
+      if (result.includes('OK')) {
+        toast({
+          title: "Сообщение отправлено!",
+          description: "Алексей свяжется с вами в ближайшее время.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast({
+          title: "Ошибка",
+          description: "Не удалось отправить сообщение. Попробуйте позже.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Ошибка",
+        description: "Сервер недоступен. Проверьте соединение.",
+        variant: "destructive"
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
