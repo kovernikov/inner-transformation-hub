@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -17,7 +16,6 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Здесь будет логика отправки формы
     toast({
       title: "Сообщение отправлено!",
       description: "Алексей свяжется с вами в ближайшее время.",
@@ -33,8 +31,13 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-warm-blue to-warm-green">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-gradient-to-br from-warm-blue/30 via-warm-green/20 to-warm-accent/20 relative overflow-hidden">
+      {/* Декоративные элементы */}
+      <div className="absolute top-10 left-10 w-64 h-64 bg-warm-accent/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-10 right-10 w-48 h-48 bg-warm-green/15 rounded-full blur-2xl animate-pulse"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-warm-blue/5 rounded-full blur-3xl"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
             Готовы начать трансформацию?

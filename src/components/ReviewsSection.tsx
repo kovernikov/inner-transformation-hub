@@ -1,10 +1,16 @@
-
 import React from 'react';
 
 const ReviewsSection = () => {
   return (
-    <section className="py-20 bg-warm-green/30">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-b from-warm-green/10 via-warm-green/20 to-white relative overflow-hidden">
+      {/* Декоративные элементы для глубины */}
+      <div className="absolute top-20 left-10 w-40 h-40 bg-warm-accent/5 rounded-full blur-2xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-warm-blue/10 rounded-full blur-xl animate-float"></div>
+
+      {/* Плавный переход */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-white z-10"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
             Отзывы клиентов

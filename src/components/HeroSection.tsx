@@ -10,8 +10,8 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Градиентный фон */}
-      <div className="absolute inset-0 bg-gradient-to-br from-warm-beige via-warm-blue to-warm-green"></div>
+      {/* Градиентный фон с плавным переходом */}
+      <div className="absolute inset-0 bg-gradient-to-br from-warm-beige via-warm-blue/30 to-warm-green/30"></div>
       
       {/* Анимированные элементы */}
       <div className="absolute inset-0">
@@ -20,6 +20,9 @@ const HeroSection = () => {
         <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-warm-accent/15 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
       </div>
 
+      {/* Градиент для плавного перехода к следующему блоку */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-warm-beige/80 z-20"></div>
+
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Фото Алексея */}
@@ -27,7 +30,7 @@ const HeroSection = () => {
             <img 
               src="https://cdn.openai.com/chat-assets/user-uploads/f7d7f514-b23f-4f8a-867b-c08730a60a4b/file-BMiLV5RRgKmoFosGquGeTE.jpg"
               alt="Алексей Коверников"
-              className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/50"
+              className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/50 transition-all duration-500 hover:scale-110 hover:shadow-3xl"
             />
           </div>
 

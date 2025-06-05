@@ -9,11 +9,14 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="py-20 bg-warm-beige relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-warm-beige via-warm-beige to-white relative overflow-hidden">
       {/* Декоративные элементы */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-warm-accent/10 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-20 right-20 w-24 h-24 bg-warm-green/20 rounded-full blur-lg animate-float"></div>
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-warm-blue/15 rounded-full blur-md animate-float" style={{animationDelay: '2s'}}></div>
+
+      {/* Плавный переход к следующему блоку */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-white z-10"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-on-scroll">
