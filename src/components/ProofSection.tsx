@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import ReviewsSection from './ReviewsSection';
@@ -8,7 +7,7 @@ const ProofSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="py-8 bg-warm-beige">
+    <section className="py-8 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center">
           <button 

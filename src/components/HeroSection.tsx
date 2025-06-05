@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -9,7 +8,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-warm-beige">
+    <section className="relative min-h-screen flex items-center justify-center bg-transparent">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 animate-scale-in">

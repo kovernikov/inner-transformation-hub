@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const HowIWorkSection = () => {
@@ -18,7 +17,7 @@ const HowIWorkSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-warm-green/5 via-warm-green/10 to-white relative overflow-hidden">
+    <section className="py-20 bg-transparent relative overflow-hidden">
       {/* Декоративные элементы */}
       <div className="absolute top-20 right-10 w-40 h-40 bg-warm-accent/10 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-10 left-20 w-32 h-32 bg-warm-blue/15 rounded-full blur-lg animate-float"></div>

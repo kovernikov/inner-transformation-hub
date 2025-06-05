@@ -43,8 +43,11 @@
   }
 
   body {
-    @apply bg-warm-beige text-warm-text font-sans;
+    @apply text-warm-text font-sans;
+    background: linear-gradient(135deg, #F5F2E8 0%, #E8F4F8 50%, #E8F5E8 100%);
+    background-attachment: fixed;
     scroll-behavior: smooth;
+    min-height: 100vh;
   }
 }
 
