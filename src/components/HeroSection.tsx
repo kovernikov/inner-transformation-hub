@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -15,7 +13,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 animate-scale-in">
             <img 
-              src="https://scontent.fprg6-1.fna.fbcdn.net/v/t39.30808-1/435670969_7440574512723019_468799531629445146_n.jpg?stp=c0.437.1365.1365a_dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e99d92&_nc_ohc=w3rRnCvhZBAQ7kNvwHg_mK_&_nc_oc=Admn6nwyE6_KcfAHt1-mtzVZa2cB0udKRs0A9t4ZaQhO3dviIQnejfHETz42DTDU83-AVFJCUhid8_wrnLvC2c4G&_nc_zt=24&_nc_ht=scontent.fprg6-1.fna&_nc_gid=aCksQcn9p7u_qOvI29eElQ&oh=00_AfNFhMrokVHT3AU-yw2uT0WbgLyq5aMICyjednIqo_5ZXA&oe=6847B03F"
+              src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
               alt="Алексей Коверников"
               className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/80 transition-all duration-500 hover:scale-110 hover:shadow-3xl"
             />
@@ -43,4 +41,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
