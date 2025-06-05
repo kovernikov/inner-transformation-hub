@@ -24,7 +24,7 @@ const App = () => {
       script.onload = () => {
         window.Koalendar('widget', {
           "url": "https://koalendar.com/e/diagnostika",
-          "text": "Schedule a meeting",
+          "text": "Запись на встречу",
           "shape": "rounded-full",
           "backgroundColor": "#4A90A4",
           "textColor": "#FFFFFF",
