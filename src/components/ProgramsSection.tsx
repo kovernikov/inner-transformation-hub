@@ -51,7 +51,7 @@ const ProgramsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-transparent">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
