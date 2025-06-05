@@ -12,31 +12,33 @@ const ReviewsSection = () => {
   const reviews = [
     {
       id: 1,
-      name: "Мария, 34 года",
-      description: "Программа 14 недель полностью изменила мою жизнь...",
-      videoSrc: "video1.mp4",
-      poster: "/api/placeholder/600/400"
+      name: "Отзыв клиента",
+      description: "История трансформации и изменения жизни...",
+      videoId: "iV1MXiheUZ0"
     },
     {
       id: 2,
-      name: "Дмитрий, 41 год",
-      description: "Перепрошивка — это не просто терапия, это новая жизнь...",
-      videoSrc: "video2.mp4",
-      poster: "/api/placeholder/600/400"
+      name: "Отзыв клиента",
+      description: "Путь к новой версии себя...",
+      videoId: "dOx4BlJzFsw"
     },
     {
       id: 3,
-      name: "Анна, 28 лет",
-      description: "Благодаря работе с Алексеем я наконец-то поняла себя...",
-      videoSrc: "video3.mp4",
-      poster: "/api/placeholder/600/400"
+      name: "Отзыв клиента",
+      description: "Перепрошивка сознания и результаты...",
+      videoId: "tKNyq7TC3Fk"
     },
     {
       id: 4,
-      name: "Сергей, 45 лет",
-      description: "После сессий я стал совершенно другим человеком...",
-      videoSrc: "video4.mp4",
-      poster: "/api/placeholder/600/400"
+      name: "Отзыв клиента",
+      description: "Кардинальные изменения в жизни...",
+      videoId: "PNfBhDod8jY"
+    },
+    {
+      id: 5,
+      name: "Отзыв клиента",
+      description: "Трансформация личности и мышления...",
+      videoId: "qQ1Rf37lH8M"
     }
   ];
 
@@ -66,15 +68,15 @@ const ReviewsSection = () => {
                   <div className="h-full">
                     <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-3xl group h-full">
                       <div className="relative overflow-hidden">
-                        <video 
-                          className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
-                          controls
-                          poster={review.poster}
-                        >
-                          <source src={review.videoSrc} type="video/mp4" />
-                          Ваш браузер не поддерживает видео.
-                        </video>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <iframe
+                          className="w-full h-64 md:h-80"
+                          src={`https://www.youtube.com/embed/${review.videoId}`}
+                          title={`YouTube video player ${review.id}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                       </div>
                       <div className="p-6">
                         <h3 className="text-xl font-semibold text-warm-text mb-3 group-hover:text-warm-accent transition-colors duration-300">
