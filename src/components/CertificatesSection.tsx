@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Carousel,
@@ -10,24 +9,6 @@ import {
 
 const CertificatesSection = () => {
   const certificates = [
-    {
-      id: 1,
-      src: "https://cdn.openai.com/chat-assets/user-uploads/f7d7f514-b23f-4f8a-867b-c08730a60a4b/file-WNV8WSicb5SZtWWH9CvqxV.jpg",
-      alt: "Сертификат по гипнотерапии",
-      title: "Гипнотерапия"
-    },
-    {
-      id: 2,
-      src: "https://cdn.openai.com/chat-assets/user-uploads/f7d7f514-b23f-4f8a-867b-c08730a60a4b/file-MiXzqjC9jPriPBeKhn46h8.png",
-      alt: "Сертификат по психологии",
-      title: "Психология"
-    },
-    {
-      id: 3,
-      src: "https://cdn.openai.com/chat-assets/user-uploads/f7d7f514-b23f-4f8a-867b-c08730a60a4b/file-P9vou19cqY5KucNEoDqqCk.jpg",
-      alt: "Дополнительная квалификация",
-      title: "Дополнительная квалификация"
-    },
     {
       id: 4,
       src: "/lovable-uploads/e62af0fa-9f72-4cbf-acb8-0ed4510c78e7.png",
