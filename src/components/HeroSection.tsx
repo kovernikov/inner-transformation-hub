@@ -19,7 +19,11 @@ const HeroSection = () => {
               className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/80 transition-all duration-500 hover:scale-110 hover:shadow-3xl"
               loading="eager"
               decoding="async"
-              style={{ imageRendering: 'crisp-edges' }}
+              fetchPriority="high"
+              style={{ 
+                imageRendering: 'crisp-edges',
+                contentVisibility: 'auto'
+              }}
             />
           </div>
 
