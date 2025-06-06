@@ -15,7 +15,7 @@ const HeroSection = () => {
           <div className="mb-8 animate-scale-in">
             <img 
               src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
-              alt="Алексей Коверников"
+              alt="Алексей Коверников — проводник внутренней трансформации и специалист по гипнотерапии"
               className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/80 transition-all duration-500 hover:scale-110 hover:shadow-3xl"
             />
           </div>
@@ -33,6 +33,7 @@ const HeroSection = () => {
             onClick={scrollToContact}
             size="lg"
             className="bg-warm-accent hover:bg-warm-accent/90 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-scale-in"
+            aria-label="Связаться с Алексеем Коверниковым для начала трансформации"
           >
             Начать путь
           </Button>
