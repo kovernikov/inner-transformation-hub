@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Users, Calendar, Star } from 'lucide-react';
@@ -144,7 +143,7 @@ const ProgramsSection = () => {
           </div>
         </div>
 
-        {/* Блок "Я — Алексей Коверников" */}
+        {/* Блок "Я — Алексей Коверников" с кнопкой */}
         <div className="text-center mt-16 animate-on-scroll animate-pulse-subtle">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
