@@ -11,24 +11,7 @@ const AboutSection = () => {
   return (
     <section className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
-          <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
-            Я — <span className="text-warm-accent">Алексей Коверников</span>
-          </h2>
-          <h3 className="text-2xl md:text-3xl font-medium text-warm-accent mb-8">
-            Проводник внутренней трансформации
-          </h3>
-          <div className="text-xl text-warm-text/70 max-w-2xl mx-auto space-y-4">
-            <p>
-              Помогаю тем, кто чувствует, что живёт не своей жизнью.
-            </p>
-            <p>
-              <span className="font-semibold">Без теорий. Без манипуляций. По-настоящему.</span>
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '0.3s' }}>
+        <div className="text-center animate-on-scroll animate-pulse-subtle">
           <Button 
             onClick={scrollToContact}
             size="lg"
