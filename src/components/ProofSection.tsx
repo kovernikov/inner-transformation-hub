@@ -10,46 +10,53 @@ const ProofSection = () => {
   return (
     <section className="py-8 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="text-center animate-pulse-subtle">
+        <div className="text-center">
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="group relative inline-flex items-center gap-3 text-warm-text/60 hover:text-warm-accent transition-all duration-500 text-lg cursor-pointer bg-transparent border-2 border-warm-accent/20 hover:border-warm-accent/60 px-8 py-4 rounded-full hover:bg-warm-accent/5 hover:shadow-lg transform hover:scale-105"
+            className="group relative inline-flex items-center gap-3 text-warm-text/60 hover:text-warm-accent transition-all duration-700 text-lg cursor-pointer bg-transparent border-2 border-warm-accent/20 hover:border-warm-accent/80 px-10 py-5 rounded-full hover:bg-warm-accent/10 hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1"
           >
-            {/* Анимированный фон */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-warm-accent/10 to-warm-green/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Многослойный анимированный фон */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-warm-accent/20 via-warm-green/15 to-warm-accent/20 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-sm"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-warm-accent/10 to-warm-green/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             
-            {/* Пульсирующий круг */}
-            <div className="absolute inset-0 rounded-full border-2 border-warm-accent/30 animate-ping group-hover:animate-none opacity-0 group-hover:opacity-100"></div>
+            {/* Пульсирующие кольца */}
+            <div className="absolute inset-0 rounded-full border-2 border-warm-accent/30 animate-ping group-hover:animate-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 rounded-full border border-warm-accent/20 scale-110 animate-pulse group-hover:animate-none opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             
-            <Eye className="w-6 h-6 transition-all duration-300 group-hover:scale-125 group-hover:text-warm-accent relative z-10" />
-            <span className="relative z-10 font-medium group-hover:font-semibold transition-all duration-300">
+            <Eye className="w-7 h-7 transition-all duration-500 group-hover:scale-150 group-hover:text-warm-accent group-hover:rotate-12 relative z-10 drop-shadow-lg" />
+            <span className="relative z-10 font-medium group-hover:font-bold transition-all duration-500 group-hover:tracking-wide">
               Для ума, которому нужно подтверждение
             </span>
             {isOpen ? (
-              <ChevronUp className="w-6 h-6 transition-all duration-300 group-hover:scale-125 relative z-10" />
+              <ChevronUp className="w-7 h-7 transition-all duration-500 group-hover:scale-150 group-hover:-translate-y-1 relative z-10 drop-shadow-lg" />
             ) : (
-              <ChevronDown className="w-6 h-6 transition-all duration-300 group-hover:scale-125 relative z-10" />
+              <ChevronDown className="w-7 h-7 transition-all duration-500 group-hover:scale-150 group-hover:translate-y-1 relative z-10 drop-shadow-lg" />
             )}
             
             {/* Светящийся эффект */}
-            <div className="absolute inset-0 rounded-full bg-warm-accent/20 blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 rounded-full bg-warm-accent/30 blur-2xl opacity-0 group-hover:opacity-70 transition-all duration-700 scale-150"></div>
+            <div className="absolute inset-0 rounded-full bg-warm-green/20 blur-xl opacity-0 group-hover:opacity-50 transition-all duration-500 scale-125"></div>
           </button>
           
-          <div className="mt-4 text-sm text-warm-text/50 group-hover:text-warm-text/70 transition-colors duration-300">
-            <span className="inline-flex items-center gap-2">
-              <span className="w-2 h-2 bg-warm-accent/60 rounded-full animate-pulse"></span>
-              {isOpen ? 'Скрыть подтверждения' : 'Показать отзывы и сертификаты'}
-              <span className="w-2 h-2 bg-warm-accent/60 rounded-full animate-pulse"></span>
+          <div className="mt-6 text-sm text-warm-text/50 transition-all duration-500 hover:text-warm-text/70">
+            <span className="inline-flex items-center gap-3">
+              <span className={`w-3 h-3 rounded-full transition-all duration-500 ${isOpen ? 'bg-warm-green/80 animate-pulse' : 'bg-warm-accent/60 animate-pulse'}`}></span>
+              <span className="font-medium transition-all duration-300">
+                {isOpen ? 'Скрыть подтверждения' : 'Показать отзывы и сертификаты'}
+              </span>
+              <span className={`w-3 h-3 rounded-full transition-all duration-500 ${isOpen ? 'bg-warm-green/80 animate-pulse' : 'bg-warm-accent/60 animate-pulse'}`}></span>
             </span>
           </div>
         </div>
         
-        <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
-          isOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'
+        <div className={`transition-all duration-700 ease-in-out overflow-hidden ${
+          isOpen ? 'max-h-[5000px] opacity-100 transform translate-y-0' : 'max-h-0 opacity-0 transform -translate-y-4'
         }`}>
-          <div className="pt-8 animate-pulse-subtle">
-            <ReviewsSection />
-            <CertificatesSection />
+          <div className="pt-8">
+            <div className={`transition-all duration-500 ${isOpen ? 'animate-fade-in' : ''}`}>
+              <ReviewsSection />
+              <CertificatesSection />
+            </div>
           </div>
         </div>
       </div>
