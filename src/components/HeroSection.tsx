@@ -8,6 +8,12 @@ const HeroSection = () => {
     contactSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const helps = [
+    "выйти из эмоциональной боли, стыда и внутреннего напряжения",
+    "перестать жить чужими сценариями", 
+    "вернуть себе опору и внутреннюю ясность"
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-transparent">
       <div className="container mx-auto px-4 text-center">
@@ -34,10 +40,27 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-warm-text/80 mb-8 animate-slide-up font-medium max-w-2xl mx-auto">
-            Помогаю собрать себя заново. Без жалости.<br />
-            С пониманием.
-          </p>
+          <div className="mb-8 animate-slide-up">
+            <h2 className="text-2xl md:text-3xl font-semibold text-warm-text mb-6">
+              Помогаю:
+            </h2>
+            
+            <div className="space-y-4 max-w-2xl mx-auto mb-6">
+              {helps.map((help, index) => (
+                <div 
+                  key={index}
+                  className="bg-warm-green/10 p-4 rounded-xl border-l-4 border-warm-accent animate-on-scroll animate-pulse-subtle text-left"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <p className="text-lg text-warm-text">{help}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-xl md:text-2xl text-warm-text/80 font-medium">
+              📍 Без манипуляций. Через внимание, гипнотерапию и прямой разговор.
+            </p>
+          </div>
 
           <Button 
             onClick={scrollToContact}
