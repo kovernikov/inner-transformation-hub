@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Droplet, ArrowRight, Lightbulb } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -33,35 +32,6 @@ const HeroSection = () => {
             а внутри — усталость, тревога и ощущение, что живёшь не свою жизнь.<br />
             Мы встретимся, чтобы разобраться.
           </h2>
-
-          <div className="space-y-8 mb-12 max-w-3xl mx-auto">
-            <div className="flex items-center justify-start text-left bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll">
-              <div className="flex-shrink-0 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-6">
-                <Droplet className="w-8 h-8 text-orange-500" />
-              </div>
-              <div className="text-xl md:text-2xl text-warm-text leading-relaxed">
-                выйти из эмоциональной боли, стыда и внутреннего напряжения
-              </div>
-            </div>
-
-            <div className="flex items-center justify-start text-left bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll">
-              <div className="flex-shrink-0 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-6">
-                <ArrowRight className="w-8 h-8 text-green-600" />
-              </div>
-              <div className="text-xl md:text-2xl text-warm-text leading-relaxed">
-                перестать жить чужими сценариями
-              </div>
-            </div>
-
-            <div className="flex items-center justify-start text-left bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll">
-              <div className="flex-shrink-0 w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-6">
-                <Lightbulb className="w-8 h-8 text-yellow-600" />
-              </div>
-              <div className="text-xl md:text-2xl text-warm-text leading-relaxed">
-                вернуть себе опору и внутреннюю ясность
-              </div>
-            </div>
-          </div>
 
           <p className="text-lg md:text-xl text-warm-text/80 mb-12 animate-slide-up leading-relaxed max-w-2xl mx-auto">
             📍 Без манипуляций. Через внимание, гипнотерапию и прямой разговор.
