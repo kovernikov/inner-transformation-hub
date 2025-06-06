@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Calendar } from 'lucide-react';
 
 const AboutSection = () => {
   const clientQuestions = [
@@ -36,15 +38,35 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Ответ */}
+          {/* Ответ с кнопкой */}
           <div className="text-center animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '0.8s' }}>
             <div className="bg-warm-accent/10 p-6 md:p-8 rounded-2xl border border-warm-accent/20">
               <p className="text-lg md:text-xl text-warm-text mb-4 font-medium">
-                Если узнаёшь себя в этих вопросах — давай встретимся.
+                Если узнаёшь себя в этих вопросах
               </p>
-              <p className="text-base md:text-lg text-warm-text/80">
+              <p className="text-base md:text-lg text-warm-text/80 mb-6">
                 Без готовых ответов. Через внимание к тому, что происходит внутри.
               </p>
+              <a 
+                href="https://koalendar.com/e/diagnostika" 
+                data-koalendar-widget
+              >
+                <Button 
+                  className="text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-lg"
+                  style={{
+                    backgroundColor: '#4A90A4',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#3A7A94';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#4A90A4';
+                  }}
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Давай встретимся
+                </Button>
+              </a>
             </div>
           </div>
         </div>
