@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -60,6 +61,26 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
+        {/* Блок "Я — Алексей Коверников" */}
+        <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="flex flex-col md:flex-row items-center gap-8 p-8 bg-white/40 backdrop-blur-sm rounded-2xl shadow-xl">
+              <img 
+                src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
+                alt="Алексей Коверников"
+                className="w-32 h-32 rounded-full object-cover shadow-lg"
+              />
+              <div className="text-left">
+                <h3 className="text-2xl font-bold text-warm-text mb-2">Я — Алексей Коверников</h3>
+                <p className="text-warm-text/80 leading-relaxed">
+                  Гипнотерапевт и проводник внутренней трансформации. 
+                  Помогаю людям найти истинные желания и освободиться от того, что мешает жить полноценно.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
             Готовы начать трансформацию?
@@ -118,7 +139,16 @@ const ContactSection = () => {
                 </div>
                 <Button 
                   type="submit"
-                  className="w-full h-12 bg-warm-accent hover:bg-warm-accent/90 text-white text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="w-full h-12 text-white text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  style={{
+                    backgroundColor: '#4A90A4',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#3A7A94';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#4A90A4';
+                  }}
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Отправить сообщение
@@ -144,7 +174,16 @@ const ContactSection = () => {
                   <a 
                     href="https://koalendar.com/e/diagnostika" 
                     data-koalendar-widget
-                    className="inline-flex items-center bg-warm-accent hover:bg-warm-accent/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105"
+                    className="inline-flex items-center text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105"
+                    style={{
+                      backgroundColor: '#4A90A4',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#3A7A94';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#4A90A4';
+                    }}
                   >
                     <Calendar className="w-5 h-5 mr-2" />
                     Запланировать встречу
