@@ -177,26 +177,6 @@ const ContactSection = () => {
             </Card>
           </div>
         </div>
-
-        {/* Блок "Я — Алексей Коверников" внизу */}
-        <div className="text-center mt-16 animate-on-scroll animate-pulse-subtle">
-          <div className="max-w-3xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-8 p-8 bg-white/40 backdrop-blur-sm rounded-2xl shadow-xl">
-              <img 
-                src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
-                alt="Алексей Коверников"
-                className="w-32 h-32 rounded-full object-cover shadow-lg"
-              />
-              <div className="text-left">
-                <h3 className="text-2xl font-bold text-warm-text mb-2">Я — Алексей Коверников</h3>
-                <p className="text-warm-text/80 leading-relaxed">
-                  Гипнотерапевт и проводник внутренней трансформации. 
-                  Помогаю людям найти истинные желания и освободиться от того, что мешает жить полноценно.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
