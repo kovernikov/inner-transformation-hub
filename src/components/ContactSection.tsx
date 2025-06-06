@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { Send, Calendar } from 'lucide-react';
+import { Send, Calendar, Bookmark } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -63,18 +63,22 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
-            Готовы начать трансформацию?
+            Готовы начать <span className="text-warm-accent hover:scale-105 transition-transform duration-300 inline-block cursor-default">трансформацию</span>?
           </h2>
           <p className="text-xl text-warm-text/70 max-w-2xl mx-auto">
-            Свяжитесь со мной для бесплатной консультации и первого шага к новой жизни.
+            Свяжитесь со мной для <span className="text-warm-accent hover:underline transition-all duration-300 cursor-default">бесплатной консультации</span> и первого шага к <span className="text-warm-accent hover:scale-105 transition-transform duration-300 inline-block cursor-default">новой жизни</span>.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {/* Форма */}
-          <Card className="shadow-2xl border-0 animate-on-scroll">
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold text-warm-text text-center">
+          <Card className="shadow-2xl border-0 bg-white/40 backdrop-blur-sm animate-on-scroll">
+            <CardHeader className="relative">
+              <div className="absolute top-4 right-4">
+                <Bookmark className="w-6 h-6 text-warm-accent/60" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-warm-text text-center flex items-center justify-center gap-2">
+                <Send className="w-6 h-6 text-warm-accent" />
                 Написать сообщение
               </CardTitle>
             </CardHeader>
@@ -88,7 +92,7 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="h-12 text-lg border-warm-accent/30 focus:border-warm-accent"
+                    className="h-12 text-lg border-warm-accent/30 focus:border-warm-accent bg-white/60"
                   />
                 </div>
                 <div>
@@ -99,7 +103,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="h-12 text-lg border-warm-accent/30 focus:border-warm-accent"
+                    className="h-12 text-lg border-warm-accent/30 focus:border-warm-accent bg-white/60"
                   />
                 </div>
                 <div>
@@ -110,7 +114,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="text-lg border-warm-accent/30 focus:border-warm-accent resize-none"
+                    className="text-lg border-warm-accent/30 focus:border-warm-accent resize-none bg-white/60"
                   />
                 </div>
                 <Button 
@@ -126,7 +130,7 @@ const ContactSection = () => {
 
           {/* Запись на встречу */}
           <div className="space-y-6 animate-on-scroll" style={{ animationDelay: '0.3s' }}>
-            <Card className="shadow-2xl border-0 bg-warm-green text-warm-text">
+            <Card className="shadow-2xl border-0 bg-warm-green/60 backdrop-blur-sm text-warm-text">
               <CardContent className="p-8 text-center">
                 <div className="mb-6">
                   <div className="w-20 h-20 bg-warm-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -136,7 +140,7 @@ const ContactSection = () => {
                     Запись на встречу
                   </h3>
                   <p className="text-warm-text/80 mb-6">
-                    Выберите удобное время для личной консультации
+                    Выберите удобное время для <span className="text-warm-accent hover:underline transition-all duration-300 cursor-default">личной консультации</span>
                   </p>
                   <a 
                     href="https://koalendar.com/e/diagnostika" 
