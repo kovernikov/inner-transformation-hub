@@ -63,7 +63,10 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
-            Готовы начать <span className="text-warm-accent hover:scale-105 transition-transform duration-300 inline-block cursor-default">трансформацию</span>?
+            Готовы начать <span className="text-warm-accent relative inline-block">
+              трансформацию
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-warm-accent to-warm-blue"></div>
+            </span>?
           </h2>
           <p className="text-xl text-warm-text/70 max-w-2xl mx-auto">
             Свяжитесь со мной для <span className="text-warm-accent hover:underline transition-all duration-300 cursor-default">бесплатной консультации</span> и первого шага к <span className="text-warm-accent hover:scale-105 transition-transform duration-300 inline-block cursor-default">новой жизни</span>.
