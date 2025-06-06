@@ -45,9 +45,9 @@
   body {
     @apply text-warm-text font-sans;
     background: linear-gradient(135deg, #F5F2E8 0%, #E8F4F8 50%, #E8F5E8 100%);
-    background-attachment: fixed;
-    scroll-behavior: smooth;
     min-height: 100vh;
+    font-family: 'Manrope', system-ui, sans-serif;
+    line-height: 1.7;
   }
 }
 
@@ -65,18 +65,6 @@
 
   .animate-pulse-subtle {
     animation: pulse-subtle 4s ease-in-out infinite;
-  }
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 
