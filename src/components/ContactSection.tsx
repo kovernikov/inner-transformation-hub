@@ -59,30 +59,14 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-transparent">
+    <section id="contact" className="py-20" style={{
+      background: 'linear-gradient(135deg, #F5F2E8 0%, #E8F4F8 50%, #E8F5E8 100%)'
+    }}>
       <div className="container mx-auto px-4">
-        {/* Блок "Я — Алексей Коверников" */}
         <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
-          <div className="max-w-3xl mx-auto mb-12">
-            <div className="flex flex-col md:flex-row items-center gap-8 p-8 bg-white/40 backdrop-blur-sm rounded-2xl shadow-xl">
-              <img 
-                src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
-                alt="Алексей Коверников"
-                className="w-32 h-32 rounded-full object-cover shadow-lg"
-              />
-              <div className="text-left">
-                <h3 className="text-2xl font-bold text-warm-text mb-2">Я — Алексей Коверников</h3>
-                <p className="text-warm-text/80 leading-relaxed">
-                  Гипнотерапевт и проводник внутренней трансформации. 
-                  Помогаю людям найти истинные желания и освободиться от того, что мешает жить полноценно.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
-          <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6" style={{
+            textShadow: '0 0 20px rgba(74, 144, 164, 0.3), 0 0 40px rgba(74, 144, 164, 0.1)'
+          }}>
             Готовы начать трансформацию?
           </h2>
           <p className="text-xl text-warm-text/70 max-w-2xl mx-auto">
@@ -191,6 +175,26 @@ const ContactSection = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Блок "Я — Алексей Коверников" внизу */}
+        <div className="text-center mt-16 animate-on-scroll animate-pulse-subtle">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-8 p-8 bg-white/40 backdrop-blur-sm rounded-2xl shadow-xl">
+              <img 
+                src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
+                alt="Алексей Коверников"
+                className="w-32 h-32 rounded-full object-cover shadow-lg"
+              />
+              <div className="text-left">
+                <h3 className="text-2xl font-bold text-warm-text mb-2">Я — Алексей Коверников</h3>
+                <p className="text-warm-text/80 leading-relaxed">
+                  Гипнотерапевт и проводник внутренней трансформации. 
+                  Помогаю людям найти истинные желания и освободиться от того, что мешает жить полноценно.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
