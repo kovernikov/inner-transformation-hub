@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -69,7 +70,13 @@ const ContactSection = () => {
             </span>?
           </h2>
           <p className="text-xl text-warm-text/70 max-w-2xl mx-auto">
-            Свяжитесь со мной для <span className="text-warm-accent cursor-default">бесплатной консультации</span> и первого шага к <span className="text-warm-accent cursor-default">новой жизни</span>.
+            Свяжитесь со мной для <span className="text-warm-accent cursor-default relative">
+              <span className="absolute inset-0 bg-warm-accent/10 blur-sm rounded-sm"></span>
+              <span className="relative">бесплатной консультации</span>
+            </span> и первого шага к <span className="text-warm-accent cursor-default relative">
+              <span className="absolute inset-0 bg-warm-accent/10 blur-sm rounded-sm"></span>
+              <span className="relative">новой жизни</span>
+            </span>.
           </p>
         </div>
 
@@ -164,3 +171,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
