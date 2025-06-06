@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Eye } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import ReviewsSection from './ReviewsSection';
 import CertificatesSection from './CertificatesSection';
 
@@ -54,8 +55,30 @@ const ProofSection = () => {
         }`}>
           <div className="pt-8">
             <div className={`transition-all duration-500 ${isOpen ? 'animate-fade-in' : ''}`}>
-              <ReviewsSection />
-              <CertificatesSection />
+              <Tabs defaultValue="reviews" className="w-full">
+                <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 bg-warm-text/5 backdrop-blur-sm border border-warm-accent/20">
+                  <TabsTrigger 
+                    value="reviews" 
+                    className="data-[state=active]:bg-warm-accent/20 data-[state=active]:text-warm-accent transition-all duration-300"
+                  >
+                    Отзывы
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="certificates"
+                    className="data-[state=active]:bg-warm-accent/20 data-[state=active]:text-warm-accent transition-all duration-300"
+                  >
+                    Сертификаты
+                  </TabsTrigger>
+                </TabsList>
+                
+                <TabsContent value="reviews" className="animate-fade-in">
+                  <ReviewsSection />
+                </TabsContent>
+                
+                <TabsContent value="certificates" className="animate-fade-in">
+                  <CertificatesSection />
+                </TabsContent>
+              </Tabs>
             </div>
           </div>
         </div>
