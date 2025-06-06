@@ -5,13 +5,34 @@ import { Calendar } from 'lucide-react';
 
 const AboutSection = () => {
   const clientQuestions = [
-    "Не понимаю, чего хочу от жизни. Вроде всё есть, а внутри пусто.",
-    "Постоянное напряжение и тревога. Всё контролирую, но не могу расслабиться.",
-    "Устал подстраиваться под других. Не чувствую, что живу своей жизнью.",
-    "Застрял в прошлом. Возвращаюсь мыслями к обидам и ситуациям, которые уже не изменить.",
-    "Хочу понять, кто я без ролей, обязательств и ожиданий.",
-    "Страх отпустить. Боюсь, что если перестану держать, всё развалится.",
-    "Хочу жить для себя, но не знаю с чего начать."
+    {
+      text: "Не понимаю, чего хочу от жизни. Вроде всё есть, а внутри пусто.",
+      emoji: "🤔"
+    },
+    {
+      text: "Постоянное напряжение и тревога. Всё контролирую, но не могу расслабиться.",
+      emoji: "😰"
+    },
+    {
+      text: "Устал подстраиваться под других. Не чувствую, что живу своей жизнью.",
+      emoji: "😔"
+    },
+    {
+      text: "Застрял в прошлом. Возвращаюсь мыслями к обидам и ситуациям, которые уже не изменить.",
+      emoji: "🔄"
+    },
+    {
+      text: "Хочу понять, кто я без ролей, обязательств и ожиданий.",
+      emoji: "🪞"
+    },
+    {
+      text: "Страх отпустить. Боюсь, что если перестану держать, всё развалится.",
+      emoji: "😨"
+    },
+    {
+      text: "Хочу жить для себя, но не знаю с чего начать.",
+      emoji: "🌱"
+    }
   ];
 
   return (
@@ -27,11 +48,15 @@ const AboutSection = () => {
               {clientQuestions.map((question, index) => (
                 <div 
                   key={index}
-                  className="bg-white/80 p-4 rounded-xl border border-warm-accent/20 text-left animate-on-scroll animate-pulse-subtle"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="bg-white/80 p-4 rounded-xl border border-warm-accent/20 text-left animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out"
+                  style={{ 
+                    animationDelay: `${index * 0.2}s`,
+                    animationFillMode: 'forwards'
+                  }}
                 >
-                  <p className="text-warm-text/80 text-sm md:text-base leading-relaxed">
-                    — {question}
+                  <p className="text-warm-text/80 text-sm md:text-base leading-relaxed flex items-start gap-3">
+                    <span className="text-xl flex-shrink-0 mt-0.5">{question.emoji}</span>
+                    <span>— {question.text}</span>
                   </p>
                 </div>
               ))}
@@ -39,7 +64,7 @@ const AboutSection = () => {
           </div>
 
           {/* Ответ с кнопкой */}
-          <div className="text-center animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '0.8s' }}>
+          <div className="text-center animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '1.6s' }}>
             <div className="bg-warm-accent/10 p-6 md:p-8 rounded-2xl border border-warm-accent/20">
               <p className="text-lg md:text-xl text-warm-text mb-4 font-medium">
                 Если узнаёшь себя в этих вопросах
