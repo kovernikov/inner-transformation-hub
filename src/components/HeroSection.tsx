@@ -31,7 +31,11 @@ const HeroSection = () => {
             />
           </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-warm-text mb-8 animate-fade-in leading-tight font-sans">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-warm-text mb-8 animate-fade-in leading-tight font-sans"
+              style={{
+                textShadow: '0 0 20px rgba(74, 144, 164, 0.4), 0 0 40px rgba(74, 144, 164, 0.3), 0 0 60px rgba(74, 144, 164, 0.2)',
+                filter: 'drop-shadow(0 0 10px rgba(74, 144, 164, 0.5))'
+              }}>
             Помогаю понять, чего ты хочешь на самом деле
           </h1>
 
