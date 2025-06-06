@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const HowIWorkSection = () => {
@@ -18,7 +17,9 @@ const HowIWorkSection = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20" style={{
+      background: 'linear-gradient(135deg, #F5F2E8 0%, #E8F4F8 50%, #E8F5E8 100%)'
+    }}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-16 animate-on-scroll">

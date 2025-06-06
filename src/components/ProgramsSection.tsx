@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Users, Calendar, Star } from 'lucide-react';
@@ -52,7 +51,9 @@ const ProgramsSection = () => {
   };
 
   return (
-    <section className="py-12">
+    <section className="py-12" style={{
+      background: 'linear-gradient(135deg, #F5F2E8 0%, #E8F4F8 50%, #E8F5E8 100%)'
+    }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">

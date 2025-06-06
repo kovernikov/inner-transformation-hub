@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const WhatIDoSection = () => {
@@ -25,7 +24,9 @@ const WhatIDoSection = () => {
   ];
 
   return (
-    <section className="py-8">
+    <section className="py-8" style={{
+      background: 'linear-gradient(135deg, #F5F2E8 0%, #E8F4F8 50%, #E8F5E8 100%)'
+    }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-3xl md:text-4xl font-bold text-warm-text mb-6 animate-pulse-subtle">
