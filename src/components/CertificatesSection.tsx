@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   Carousel,
@@ -66,7 +67,7 @@ const CertificatesSection = () => {
                     <img 
                       src={cert.src}
                       alt={cert.alt}
-                      className={`w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 ${cert.rotated ? 'rotate-90' : ''}`}
+                      className={`w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 ${cert.rotated ? 'rotate-90 scale-75' : ''}`}
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-warm-accent/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
