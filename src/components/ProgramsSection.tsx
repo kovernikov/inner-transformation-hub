@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Users, Calendar, Star } from 'lucide-react';
@@ -51,9 +52,9 @@ const ProgramsSection = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-12">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
+        <div className="text-center mb-12 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
             Программы трансформации
           </h2>
@@ -115,8 +116,8 @@ const ProgramsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16 animate-on-scroll animate-pulse-subtle">
-          <div className="bg-white rounded-3xl p-8 max-w-4xl mx-auto shadow-lg">
+        <div className="text-center mt-12 animate-on-scroll animate-pulse-subtle">
+          <div className="bg-white rounded-3xl p-6 max-w-4xl mx-auto shadow-lg">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8">
               <div className="flex items-center gap-3">
                 <Users className="w-8 h-8 text-warm-accent" />
@@ -143,13 +144,13 @@ const ProgramsSection = () => {
           </div>
         </div>
 
-        {/* Блок "Я — Алексей Коверников" с кнопкой */}
-        <div className="text-center mt-16 animate-on-scroll animate-pulse-subtle">
-          <div className="text-center mb-16">
+        {/* Блок "Я — Алексей Коверников" */}
+        <div className="text-center mt-12 animate-on-scroll animate-pulse-subtle">
+          <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
               Я — <span className="text-warm-accent">Алексей Коверников</span>
             </h2>
-            <h3 className="text-2xl md:text-3xl font-medium text-warm-accent mb-8">
+            <h3 className="text-2xl md:text-3xl font-medium text-warm-accent mb-6">
               Проводник внутренней трансформации
             </h3>
             <div className="text-xl text-warm-text/70 max-w-2xl mx-auto space-y-4">
@@ -160,17 +161,6 @@ const ProgramsSection = () => {
                 <span className="font-semibold">Без теорий. Без манипуляций. По-настоящему.</span>
               </p>
             </div>
-          </div>
-
-          <div className="text-center">
-            <Button 
-              onClick={scrollToContact}
-              size="lg"
-              className="bg-warm-accent hover:bg-warm-accent/90 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
-              aria-label="Узнать больше о методах работы Алексея Коверникова"
-            >
-              Хочу узнать больше
-            </Button>
           </div>
         </div>
       </div>
