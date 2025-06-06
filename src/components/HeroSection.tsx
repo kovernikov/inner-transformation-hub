@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -24,7 +25,8 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-warm-text/80 mb-8 animate-slide-up font-medium max-w-2xl mx-auto">
-            Помогаю собрать себя заново. Без жалости. С пониманием.
+            Помогаю собрать себя заново. Без жалости.<br />
+            С пониманием.
           </p>
 
           <Button 
