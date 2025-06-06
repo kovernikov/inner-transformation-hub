@@ -9,14 +9,20 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-warm-beige/80 via-warm-blue/60 to-warm-green/70">
-      <div className="container mx-auto px-4 text-center">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-warm-beige/80 via-warm-blue/60 to-warm-green/70 overflow-hidden">
+      {/* Добавляем текстуру через псевдоэлемент */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
+      
+      <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-on-scroll animate-pulse-subtle">
           <div className="mb-12 animate-scale-in">
             <img 
               src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
               alt="Алексей Коверников — проводник внутренней трансформации и специалист по гипнотерапии"
-              className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/80 transition-all duration-500 hover:scale-105 hover:shadow-3xl"
+              className="w-56 h-56 md:w-72 md:h-72 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/80 transition-all duration-500 hover:scale-105 hover:shadow-3xl"
+              style={{
+                filter: 'drop-shadow(0 0 30px rgba(74, 144, 164, 0.3))'
+              }}
               loading="eager"
               decoding="async"
               fetchPriority="high"
@@ -35,12 +41,12 @@ const HeroSection = () => {
           </h2>
 
           <p className="text-lg md:text-xl text-warm-text/80 mb-12 animate-slide-up leading-relaxed max-w-2xl mx-auto">
-            📍 Без манипуляций. Через внимание, гипнотерапию и прямой разговор.
+            Без манипуляций. Через внимание, гипнотерапию и прямой разговор.
           </p>
 
           <Button 
             onClick={scrollToContact}
-            className="bg-warm-accent/90 hover:bg-warm-accent text-white px-12 py-6 text-xl font-medium rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-scale-in border-none backdrop-blur-sm"
+            className="bg-emerald-600/90 hover:bg-emerald-700 text-white px-16 py-8 text-xl font-medium rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 hover:translate-y-[-2px] animate-scale-in border-none backdrop-blur-sm"
             aria-label="Связаться с Алексеем Коверниковым для начала трансформации"
           >
             Начать путь
