@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Eye } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -14,15 +13,8 @@ const ProofSection = () => {
         <div className="text-center">
           <div 
             onClick={() => setIsOpen(!isOpen)}
-            className="group relative inline-flex items-center gap-3 text-warm-text/60 hover:text-warm-accent transition-all duration-700 text-lg cursor-pointer px-8 py-4 rounded-full hover:bg-warm-accent/5 transform hover:scale-105"
+            className="group relative inline-flex items-center gap-3 text-warm-text/60 hover:text-warm-accent transition-all duration-700 text-lg cursor-pointer px-8 py-4 transform hover:scale-105 focus:outline-none"
           >
-            {/* Светящийся эффект при наведении */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-warm-accent/10 via-transparent to-warm-accent/10 opacity-0 group-hover:opacity-100 transition-all duration-700 blur-md"></div>
-            
-            {/* Пульсирующие волны */}
-            <div className="absolute inset-0 rounded-full border border-warm-accent/20 scale-100 group-hover:scale-110 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-            <div className="absolute inset-0 rounded-full border border-warm-accent/10 scale-110 group-hover:scale-125 opacity-0 group-hover:opacity-70 transition-all duration-700"></div>
-            
             {/* Иконка глаза с анимацией */}
             <Eye className="w-6 h-6 transition-all duration-500 group-hover:scale-125 group-hover:text-warm-accent group-hover:rotate-6 relative z-10 drop-shadow-lg" />
             
@@ -38,9 +30,6 @@ const ProofSection = () => {
             ) : (
               <ChevronDown className="w-6 h-6 transition-all duration-500 group-hover:scale-125 group-hover:translate-y-1 relative z-10 drop-shadow-lg" />
             )}
-            
-            {/* Мягкое свечение по краям */}
-            <div className="absolute -inset-2 rounded-full bg-warm-accent/5 blur-xl opacity-0 group-hover:opacity-50 transition-all duration-700"></div>
           </div>
           
           <div className="mt-4 text-sm text-warm-text/50 transition-all duration-500 hover:text-warm-text/70">
