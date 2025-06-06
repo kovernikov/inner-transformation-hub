@@ -13,43 +13,48 @@ const ReviewsSection = () => {
   const reviews = [
     {
       id: 1,
-      quote: "Полная трансформация сознания за 3 месяца работы",
-      videoId: "iV1MXiheUZ0"
+      quote: "Полная трансформация сознания за несколько месяцев",
+      videoId: "qy0QAH4jX5w"
     },
     {
       id: 2,
-      quote: "Наконец нашёл себя настоящего",
-      videoId: "dOx4BlJzFsw"
+      quote: "Нашёл путь к внутренней гармонии",
+      videoId: "HuGyUHG39EI"
     },
     {
       id: 3,
       quote: "Кардинальные изменения в восприятии жизни",
-      videoId: "tKNyq7TC3Fk"
+      videoId: "zngxwUcxvD0"
     },
     {
       id: 4,
       quote: "Освобождение от старых паттернов мышления",
-      videoId: "PNfBhDod8jY"
+      videoId: "mr33MCbFTFU"
     },
     {
       id: 5,
       quote: "Глубокие внутренние изменения",
-      videoId: "qQ1Rf37lH8M"
+      videoId: "OR8PW8qo_Lw"
     },
     {
       id: 6,
       quote: "Новый взгляд на себя и мир",
-      videoId: "01351eHikIU"
+      videoId: "Mrh7RNQKxmc"
     },
     {
       id: 7,
       quote: "Путь к пониманию истинного себя",
-      videoId: "YiS2cpkapYI"
+      videoId: "OJDMXFDUwqw"
     },
     {
       id: 8,
       quote: "Преодоление внутренних барьеров",
-      videoId: "7FIa1FbGOFM"
+      videoId: "pFakUS5jbbs"
+    },
+    {
+      id: 9,
+      quote: "Обретение внутреннего спокойствия",
+      videoId: "5BVLq1r9OIQ"
     }
   ];
 
