@@ -43,22 +43,19 @@
   }
 
   body {
-    @apply text-warm-text;
-    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    @apply text-warm-text font-sans;
     background: linear-gradient(135deg, #F5F2E8 0%, #E8F4F8 50%, #E8F5E8 100%);
     background-attachment: fixed;
     scroll-behavior: smooth;
     min-height: 100vh;
-    line-height: 1.7;
-    letter-spacing: 0.01em;
   }
 }
 
 @layer utilities {
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
   .animate-on-scroll.animate {
@@ -67,11 +64,7 @@
   }
 
   .animate-pulse-subtle {
-    animation: pulse-subtle 6s ease-in-out infinite;
-  }
-
-  .border-3 {
-    border-width: 3px;
+    animation: pulse-subtle 4s ease-in-out infinite;
   }
 }
 
@@ -92,20 +85,12 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.02);
+    transform: scale(1.015);
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
-  }
-}
-
-/* Плавные переходы для всех интерактивных элементов */
-@layer components {
-  .transition-all {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
