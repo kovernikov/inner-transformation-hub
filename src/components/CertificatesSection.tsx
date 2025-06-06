@@ -43,7 +43,8 @@ const CertificatesSection = () => {
       id: 11,
       src: "/lovable-uploads/3c30a1de-e73b-4b57-9e38-3bf5fb50ad65.png",
       alt: "Сертификат международной федерации арт-терапии и самопознания Алексея Коверникова",
-      title: "Теория и практика консультирования"
+      title: "Теория и практика консультирования",
+      rotated: true
     }
   ];
 
@@ -65,7 +66,7 @@ const CertificatesSection = () => {
                     <img 
                       src={cert.src}
                       alt={cert.alt}
-                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                      className={`w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 ${cert.rotated ? 'rotate-90' : ''}`}
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-warm-accent/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
