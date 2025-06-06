@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
@@ -25,25 +26,56 @@ const Index = () => {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach((el) => observer.observe(el));
 
-    // Логика для смены фона при скролле
+    // Улучшенная логика для плавного параллакс эффекта
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollProgress = scrollY / documentHeight;
+      const scrollProgress = Math.min(scrollY / documentHeight, 1);
       
-      // Начинаем показывать звёздный фон после 30% прокрутки
-      if (scrollProgress > 0.3) {
+      // Устанавливаем CSS переменную для прогресса прокрутки
+      document.documentElement.style.setProperty('--scroll-progress', scrollProgress.toString());
+      
+      // Плавный переход фона начинается после 20% прокрутки
+      if (scrollProgress > 0.2) {
         document.body.classList.add('scrolled');
       } else {
         document.body.classList.remove('scrolled');
       }
+
+      // Дополнительный параллакс эффект для секций
+      const sections = document.querySelectorAll('section');
+      sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        const elementTop = rect.top;
+        const elementHeight = rect.height;
+        const windowHeight = window.innerHeight;
+        
+        // Вычисляем параллакс смещение
+        if (elementTop < windowHeight && elementTop + elementHeight > 0) {
+          const parallaxSpeed = 0.5;
+          const yPos = -(elementTop * parallaxSpeed);
+          section.style.transform = `translateY(${yPos}px)`;
+        }
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Используем requestAnimationFrame для более плавной анимации
+    let ticking = false;
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
 
     return () => {
       animatedElements.forEach((el) => observer.unobserve(el));
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', requestTick);
     };
   }, []);
 
