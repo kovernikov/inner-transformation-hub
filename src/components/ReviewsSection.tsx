@@ -11,49 +11,91 @@ import {
 
 const ReviewsSection = () => {
   const reviews = [
+    // Старые видео
     {
       id: 1,
       quote: "Полная трансформация сознания за несколько месяцев",
-      videoId: "qy0QAH4jX5w"
+      videoId: "iV1MXiheUZ0"
     },
     {
       id: 2,
       quote: "Нашёл путь к внутренней гармонии",
-      videoId: "HuGyUHG39EI"
+      videoId: "dOx4BlJzFsw"
     },
     {
       id: 3,
       quote: "Кардинальные изменения в восприятии жизни",
-      videoId: "zngxwUcxvD0"
+      videoId: "tKNyq7TC3Fk"
     },
     {
       id: 4,
       quote: "Освобождение от старых паттернов мышления",
-      videoId: "mr33MCbFTFU"
+      videoId: "PNfBhDod8jY"
     },
     {
       id: 5,
       quote: "Глубокие внутренние изменения",
-      videoId: "OR8PW8qo_Lw"
+      videoId: "qQ1Rf37lH8M"
     },
     {
       id: 6,
       quote: "Новый взгляд на себя и мир",
-      videoId: "Mrh7RNQKxmc"
+      videoId: "01351eHikIU"
     },
     {
       id: 7,
       quote: "Путь к пониманию истинного себя",
-      videoId: "OJDMXFDUwqw"
+      videoId: "YiS2cpkapYI"
     },
     {
       id: 8,
       quote: "Преодоление внутренних барьеров",
-      videoId: "pFakUS5jbbs"
+      videoId: "7FIa1FbGOFM"
     },
+    // Новые видео
     {
       id: 9,
       quote: "Обретение внутреннего спокойствия",
+      videoId: "qy0QAH4jX5w"
+    },
+    {
+      id: 10,
+      quote: "Открытие своих истинных желаний",
+      videoId: "HuGyUHG39EI"
+    },
+    {
+      id: 11,
+      quote: "Понимание смысла своего существования",
+      videoId: "zngxwUcxvD0"
+    },
+    {
+      id: 12,
+      quote: "Свобода от навязанных стереотипов",
+      videoId: "mr33MCbFTFU"
+    },
+    {
+      id: 13,
+      quote: "Обретение уверенности в себе",
+      videoId: "OR8PW8qo_Lw"
+    },
+    {
+      id: 14,
+      quote: "Гармония между разумом и сердцем",
+      videoId: "Mrh7RNQKxmc"
+    },
+    {
+      id: 15,
+      quote: "Принятие себя без условий",
+      videoId: "OJDMXFDUwqw"
+    },
+    {
+      id: 16,
+      quote: "Освобождение от внутренних страхов",
+      videoId: "pFakUS5jbbs"
+    },
+    {
+      id: 17,
+      quote: "Ясность в жизненных решениях",
       videoId: "5BVLq1r9OIQ"
     }
   ];
