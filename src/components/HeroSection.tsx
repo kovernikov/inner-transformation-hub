@@ -9,9 +9,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-warm-beige via-warm-blue to-warm-green">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-warm-beige/80 via-warm-blue/60 to-warm-green/70">
       <div className="container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto animate-on-scroll">
+        <div className="max-w-4xl mx-auto animate-on-scroll animate-pulse-subtle">
           <div className="mb-12 animate-scale-in">
             <img 
               src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
@@ -23,7 +23,7 @@ const HeroSection = () => {
             />
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-warm-text mb-8 animate-fade-in leading-tight font-sans">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-warm-text mb-8 animate-fade-in leading-tight font-sans">
             Помогаю понять, чего ты хочешь на самом деле
           </h1>
 
