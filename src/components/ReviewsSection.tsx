@@ -13,49 +13,41 @@ const ReviewsSection = () => {
   const reviews = [
     {
       id: 1,
-      name: "Мария К.",
       quote: "Полная трансформация сознания за 3 месяца работы",
       videoId: "iV1MXiheUZ0"
     },
     {
       id: 2,
-      name: "Андрей П.",
       quote: "Наконец нашёл себя настоящего",
       videoId: "dOx4BlJzFsw"
     },
     {
       id: 3,
-      name: "Елена В.",
       quote: "Кардинальные изменения в восприятии жизни",
       videoId: "tKNyq7TC3Fk"
     },
     {
       id: 4,
-      name: "Дмитрий С.",
       quote: "Освобождение от старых паттернов мышления",
       videoId: "PNfBhDod8jY"
     },
     {
       id: 5,
-      name: "Анна М.",
       quote: "Глубокие внутренние изменения",
       videoId: "qQ1Rf37lH8M"
     },
     {
       id: 6,
-      name: "Николай Т.",
       quote: "Новый взгляд на себя и мир",
       videoId: "01351eHikIU"
     },
     {
       id: 7,
-      name: "Светлана Р.",
       quote: "Путь к пониманию истинного себя",
       videoId: "YiS2cpkapYI"
     },
     {
       id: 8,
-      name: "Михаил Л.",
       quote: "Преодоление внутренних барьеров",
       videoId: "7FIa1FbGOFM"
     }
@@ -79,7 +71,7 @@ const ReviewsSection = () => {
                     <iframe
                       className="w-full h-full"
                       src={`https://www.youtube.com/embed/${review.videoId}`}
-                      title={`Отзыв ${review.name}`}
+                      title={`Отзыв клиента`}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
@@ -90,9 +82,6 @@ const ReviewsSection = () => {
                   <div className="p-6 space-y-4">
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <h3 className="font-semibold text-warm-text text-lg mb-2 group-hover:text-warm-accent transition-colors duration-300">
-                          {review.name}
-                        </h3>
                         <p className="text-warm-text/70 italic leading-relaxed text-sm">
                           "{review.quote}"
                         </p>
