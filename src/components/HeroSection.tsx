@@ -21,9 +21,10 @@ const HeroSection = () => {
             <img 
               src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
               alt="Алексей Коверников — проводник внутренней трансформации и специалист по гипнотерапии"
-              className="w-56 h-56 md:w-72 md:h-72 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/80 transition-all duration-500 hover:scale-105 hover:shadow-3xl"
+              className="w-56 h-56 md:w-72 md:h-72 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/80 transition-all duration-500 hover:scale-105 hover:shadow-3xl animate-float"
               style={{
-                filter: 'drop-shadow(0 0 30px rgba(74, 144, 164, 0.3))'
+                filter: 'drop-shadow(0 0 30px rgba(74, 144, 164, 0.3))',
+                animationDelay: '0.2s'
               }}
               loading="eager"
               decoding="async"
@@ -31,18 +32,48 @@ const HeroSection = () => {
             />
           </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-warm-text mb-8 animate-fade-in leading-tight font-sans">
+          <h1 
+            className="text-3xl md:text-5xl lg:text-6xl font-bold text-warm-text mb-8 animate-fade-in leading-tight font-sans"
+            style={{ animationDelay: '0.4s' }}
+          >
             Помогаю понять, чего ты хочешь на самом деле
           </h1>
 
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-warm-text/90 font-medium mb-12 animate-slide-up leading-relaxed max-w-3xl mx-auto">
-            Снаружи всё вроде нормально,<br />
-            а внутри — усталость, тревога, пустота.<br />
-            Чувство, что ты живёшь не свою жизнь.<br />
-            Мы встретимся, чтобы это изменить.
-          </h2>
+          <div className="space-y-6 mb-12">
+            <h2 
+              className="text-xl md:text-2xl lg:text-3xl text-warm-text/90 font-medium animate-slide-up leading-relaxed"
+              style={{ animationDelay: '0.6s' }}
+            >
+              Чувствуешь, что живёшь не своей жизнью?
+            </h2>
+            
+            <h2 
+              className="text-xl md:text-2xl lg:text-3xl text-warm-text/90 font-medium animate-slide-up leading-relaxed"
+              style={{ animationDelay: '0.8s' }}
+            >
+              Постоянное напряжение, контроль, тревога?
+            </h2>
+            
+            <h2 
+              className="text-xl md:text-2xl lg:text-3xl text-warm-text/90 font-medium animate-slide-up leading-relaxed"
+              style={{ animationDelay: '1s' }}
+            >
+              Не понимаешь, чего хочешь — но знаешь точно,<br />
+              что больше так не хочешь.
+            </h2>
+            
+            <p 
+              className="text-xl md:text-2xl lg:text-3xl text-warm-accent font-semibold animate-scale-in"
+              style={{ animationDelay: '1.2s' }}
+            >
+              Мы встретимся, чтобы разобраться.
+            </p>
+          </div>
 
-          <p className="text-lg md:text-xl text-warm-text/80 mb-12 animate-slide-up leading-relaxed max-w-2xl mx-auto">
+          <p 
+            className="text-lg md:text-xl text-warm-text/80 mb-12 animate-slide-up leading-relaxed max-w-2xl mx-auto"
+            style={{ animationDelay: '1.4s' }}
+          >
             Без манипуляций. Через внимание, гипнотерапию и прямой разговор.
           </p>
 
@@ -51,6 +82,7 @@ const HeroSection = () => {
             className="text-white px-16 py-8 text-xl font-medium rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 hover:translate-y-[-2px] animate-scale-in border-none backdrop-blur-sm"
             style={{
               backgroundColor: '#4A90A4',
+              animationDelay: '1.6s'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = '#3A7A94';
