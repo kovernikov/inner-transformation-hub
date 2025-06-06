@@ -28,7 +28,10 @@ const HeroSection = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-warm-text mb-6 animate-fade-in leading-tight">
-            Точка, после которой ты не вернёшься в старое
+            <span className="relative inline-block">
+              <span className="absolute inset-0 bg-warm-accent/5 blur-md rounded-lg"></span>
+              <span className="relative drop-shadow-sm">Точка, после которой ты не вернёшься в старое</span>
+            </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-warm-text/80 mb-8 animate-slide-up font-medium max-w-2xl mx-auto">
