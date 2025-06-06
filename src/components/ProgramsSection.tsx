@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Users, Calendar, Star } from 'lucide-react';
@@ -5,8 +6,8 @@ import { CheckCircle, Users, Calendar, Star } from 'lucide-react';
 const ProgramsSection = () => {
   const programs = [
     {
-      title: "7 недель",
-      description: "Начальная программа трансформации личности",
+      title: "Пробуждение",
+      description: "7-недельная программа",
       price: "1500€",
       features: [
         "7 недель интенсивной работы",
@@ -18,8 +19,8 @@ const ProgramsSection = () => {
       popular: false
     },
     {
-      title: "14 недель",
-      description: "Углубленная программа личностной трансформации",
+      title: "Трансформация",
+      description: "14-недельная программа",
       price: "2500€",
       features: [
         "14 недель интенсивной работы",
@@ -32,7 +33,7 @@ const ProgramsSection = () => {
     },
     {
       title: "Перепрошивка",
-      description: "Полная трансформация личности и мышления",
+      description: "25 сессий",
       price: "4500€",
       features: [
         "Комплексная перепрошивка",
