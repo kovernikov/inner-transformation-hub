@@ -1,6 +1,6 @@
+
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Eye } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import ReviewsSection from './ReviewsSection';
 import CertificatesSection from './CertificatesSection';
 
@@ -46,32 +46,21 @@ const ProofSection = () => {
         <div className={`transition-all duration-700 ease-in-out overflow-hidden ${
           isOpen ? 'max-h-[5000px] opacity-100 transform translate-y-0' : 'max-h-0 opacity-0 transform -translate-y-4'
         }`}>
-          <div className="pt-8">
+          <div className="pt-8 space-y-12">
+            {/* Отзывы */}
             <div className={`transition-all duration-500 ${isOpen ? 'animate-fade-in' : ''}`}>
-              <Tabs defaultValue="reviews" className="w-full">
-                <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 bg-warm-text/5 backdrop-blur-sm border border-warm-accent/20">
-                  <TabsTrigger 
-                    value="reviews" 
-                    className="data-[state=active]:bg-warm-accent/20 data-[state=active]:text-warm-accent transition-all duration-300"
-                  >
-                    Отзывы
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="certificates"
-                    className="data-[state=active]:bg-warm-accent/20 data-[state=active]:text-warm-accent transition-all duration-300"
-                  >
-                    Сертификаты
-                  </TabsTrigger>
-                </TabsList>
-                
-                <TabsContent value="reviews" className="animate-fade-in">
-                  <ReviewsSection />
-                </TabsContent>
-                
-                <TabsContent value="certificates" className="animate-fade-in">
-                  <CertificatesSection />
-                </TabsContent>
-              </Tabs>
+              <h2 className="text-2xl font-bold text-warm-text text-center mb-8">
+                Отзывы клиентов
+              </h2>
+              <ReviewsSection />
+            </div>
+            
+            {/* Сертификаты */}
+            <div className={`transition-all duration-500 ${isOpen ? 'animate-fade-in' : ''}`}>
+              <h2 className="text-2xl font-bold text-warm-text text-center mb-8">
+                Сертификаты и образование
+              </h2>
+              <CertificatesSection />
             </div>
           </div>
         </div>
