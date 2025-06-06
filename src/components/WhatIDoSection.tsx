@@ -27,7 +27,7 @@ const WhatIDoSection = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-12 animate-pulse-subtle">
             Что я <span className="text-warm-accent relative inline-block">
               делаю
@@ -38,7 +38,7 @@ const WhatIDoSection = () => {
 
         <div className="max-w-4xl mx-auto">
           {/* Кому помогаю */}
-          <div className="mb-16 animate-on-scroll">
+          <div className="mb-16 animate-on-scroll animate-pulse-subtle">
             <h3 className="text-2xl md:text-3xl font-semibold text-warm-text mb-8 text-center animate-pulse-subtle">
               Я работаю с людьми, которые:
             </h3>
@@ -56,7 +56,7 @@ const WhatIDoSection = () => {
           </div>
 
           {/* Подход */}
-          <div className="animate-on-scroll" style={{ animationDelay: '0.5s' }}>
+          <div className="animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '0.5s' }}>
             <div className="grid md:grid-cols-1 gap-8 max-w-3xl mx-auto">
               {approaches.map((approach, index) => (
                 <div 

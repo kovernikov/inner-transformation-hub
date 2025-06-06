@@ -11,7 +11,7 @@ const AboutSection = () => {
   return (
     <section className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
             Я — <span className="text-warm-accent">Алексей Коверников</span>
           </h2>
@@ -28,7 +28,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="text-center animate-on-scroll" style={{ animationDelay: '0.3s' }}>
+        <div className="text-center animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '0.3s' }}>
           <Button 
             onClick={scrollToContact}
             size="lg"

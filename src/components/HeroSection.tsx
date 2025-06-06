@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-transparent">
       <div className="container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-pulse-subtle">
           <div className="mb-8 animate-scale-in">
             <img 
               src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
@@ -29,7 +29,7 @@ const HeroSection = () => {
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-warm-text mb-6 animate-fade-in leading-tight">
             <span className="relative inline-block">
-              <span className="absolute inset-0 bg-warm-accent/5 blur-md rounded-lg"></span>
+              <span className="absolute inset-0 bg-warm-accent/10 blur-md rounded-lg shadow-warm-accent/20 shadow-2xl"></span>
               <span className="relative drop-shadow-sm">Точка, после которой ты не вернёшься в старое</span>
             </span>
           </h1>

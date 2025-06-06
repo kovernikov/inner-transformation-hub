@@ -54,7 +54,7 @@ const ProgramsSection = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
             Программы трансформации
           </h2>
@@ -67,7 +67,7 @@ const ProgramsSection = () => {
           {programs.map((program, index) => (
             <div 
               key={index}
-              className={`relative bg-white rounded-3xl p-8 transition-all duration-300 hover:shadow-xl group animate-on-scroll ${
+              className={`relative bg-white rounded-3xl p-8 transition-all duration-300 hover:shadow-xl group animate-on-scroll animate-pulse-subtle ${
                 program.popular ? 'ring-2 ring-warm-accent shadow-xl' : 'shadow-lg'
               }`}
               style={{ animationDelay: `${index * 0.2}s` }}
@@ -116,7 +116,7 @@ const ProgramsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16 animate-on-scroll">
+        <div className="text-center mt-16 animate-on-scroll animate-pulse-subtle">
           <div className="bg-white rounded-3xl p-8 max-w-4xl mx-auto shadow-lg">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8">
               <div className="flex items-center gap-3">

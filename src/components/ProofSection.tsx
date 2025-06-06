@@ -10,7 +10,7 @@ const ProofSection = () => {
   return (
     <section className="py-8 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="text-center">
+        <div className="text-center animate-pulse-subtle">
           <button 
             onClick={() => setIsOpen(!isOpen)}
             className="group relative inline-flex items-center gap-3 text-warm-text/60 hover:text-warm-accent transition-all duration-500 text-lg cursor-pointer bg-transparent border-2 border-warm-accent/20 hover:border-warm-accent/60 px-8 py-4 rounded-full hover:bg-warm-accent/5 hover:shadow-lg transform hover:scale-105"
@@ -47,7 +47,7 @@ const ProofSection = () => {
         <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
           isOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="pt-8">
+          <div className="pt-8 animate-pulse-subtle">
             <ReviewsSection />
             <CertificatesSection />
           </div>

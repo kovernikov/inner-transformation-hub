@@ -60,12 +60,9 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-16 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
-            Готовы начать <span className="text-warm-accent relative inline-block animate-breathe">
-              трансформацию
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-warm-accent to-warm-blue"></div>
-            </span>?
+            Готовы начать трансформацию?
           </h2>
           <p className="text-xl text-warm-text/70 max-w-2xl mx-auto">
             Свяжитесь со мной для бесплатной консультации и первого шага к новой жизни.
@@ -74,7 +71,7 @@ const ContactSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {/* Форма */}
-          <Card className="shadow-2xl border-0 bg-white/40 backdrop-blur-sm animate-on-scroll">
+          <Card className="shadow-2xl border-0 bg-white/40 backdrop-blur-sm animate-on-scroll animate-pulse-subtle">
             <CardHeader className="relative">
               <div className="absolute top-4 right-4">
                 <Bookmark className="w-6 h-6 text-warm-accent/60" />
@@ -131,7 +128,7 @@ const ContactSection = () => {
           </Card>
 
           {/* Запись на встречу */}
-          <div className="space-y-6 animate-on-scroll" style={{ animationDelay: '0.3s' }}>
+          <div className="space-y-6 animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '0.3s' }}>
             <Card className="shadow-2xl border-0 bg-warm-green/60 backdrop-blur-sm text-warm-text">
               <CardContent className="p-8 text-center">
                 <div className="mb-6">
