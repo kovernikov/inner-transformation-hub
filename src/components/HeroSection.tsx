@@ -35,7 +35,7 @@ const HeroSection = () => {
             Помогаю понять, чего ты хочешь на самом деле
           </h1>
 
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-warm-text/90 font-medium mb-12 animate-slide-up leading-relaxed max-w-3xl mx-auto">
+          <h2 className="text-lg md:text-xl lg:text-2xl text-warm-text/90 font-medium mb-12 animate-slide-up leading-relaxed max-w-3xl mx-auto">
             Чувствуешь, что живёшь не своей жизнью?<br />
             Постоянное напряжение, контроль, тревога?<br />
             Не понимаешь, чего хочешь — но знаешь точно, что больше так не хочешь.<br />
