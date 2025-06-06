@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -68,7 +69,7 @@ const ContactSection = () => {
             </span>?
           </h2>
           <p className="text-xl text-warm-text/70 max-w-2xl mx-auto">
-            Свяжитесь со мной для <span className="text-warm-accent hover:underline transition-all duration-300 cursor-default">бесплатной консультации</span> и первого шага к <span className="text-warm-accent hover:scale-105 transition-transform duration-300 inline-block cursor-default">новой жизни</span>.
+            Свяжитесь со мной для <span className="text-warm-accent cursor-default">бесплатной консультации</span> и первого шага к <span className="text-warm-accent cursor-default">новой жизни</span>.
           </p>
         </div>
 
