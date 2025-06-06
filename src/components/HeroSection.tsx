@@ -36,10 +36,10 @@ const HeroSection = () => {
           </h1>
 
           <h2 className="text-xl md:text-2xl lg:text-3xl text-warm-text/90 font-medium mb-12 animate-slide-up leading-relaxed max-w-3xl mx-auto">
-            Снаружи всё вроде нормально,<br />
-            а внутри — усталость, тревога, пустота.<br />
-            Чувство, что ты живёшь не свою жизнь.<br />
-            Мы встретимся, чтобы это изменить.
+            Чувствуешь, что живёшь не своей жизнью?<br />
+            Постоянное напряжение, контроль, тревога?<br />
+            Не понимаешь, чего хочешь — но знаешь точно, что больше так не хочешь.<br />
+            Мы встретимся, чтобы разобраться.
           </h2>
 
           <p className="text-lg md:text-xl text-warm-text/80 mb-12 animate-slide-up leading-relaxed max-w-2xl mx-auto">
