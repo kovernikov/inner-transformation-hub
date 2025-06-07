@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-16 md:pb-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-24 md:pb-0">
       {/* Добавляем текстуру через псевдоэлемент */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
       
