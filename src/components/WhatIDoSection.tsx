@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const WhatIDoSection = () => {
@@ -11,7 +12,7 @@ const WhatIDoSection = () => {
   const approaches = [
     {
       instead: "Вместо готовых ответов",
-      give: "я даю пространство, где можно услышать себя"
+      give: "даю пространство, где можно услышать себя"
     },
     {
       instead: "Вместо мотивации",
@@ -28,7 +29,7 @@ const WhatIDoSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-3xl md:text-4xl font-bold text-warm-text mb-6 animate-pulse-subtle">
-            Что я <span className="text-warm-accent relative inline-block">
+            Что <span className="text-warm-accent relative inline-block">
               делаю
               <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-warm-accent to-warm-blue"></div>
             </span>
@@ -39,7 +40,7 @@ const WhatIDoSection = () => {
           {/* Кому помогаю */}
           <div className="mb-8 animate-on-scroll animate-pulse-subtle">
             <h3 className="text-xl md:text-2xl font-semibold text-warm-text mb-4 text-center animate-pulse-subtle">
-              Я работаю с людьми, которые:
+              Работа с людьми, которые:
             </h3>
             <div className="grid md:grid-cols-2 gap-3 max-w-3xl mx-auto">
               {issues.map((issue, index) => (

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const HowIWorkSection = () => {
@@ -22,7 +23,7 @@ const HowIWorkSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-12 animate-pulse-subtle">
-              Как я <span className="text-warm-accent relative inline-block">
+              Как <span className="text-warm-accent relative inline-block">
                 работаю
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-warm-accent to-warm-green"></div>
               </span>
@@ -33,10 +34,10 @@ const HowIWorkSection = () => {
           <div className="mb-12 animate-on-scroll">
             <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg animate-pulse-subtle">
               <p className="text-xl md:text-2xl text-warm-text mb-6 font-medium">
-                Я не психолог, не коуч, не шаман.
+                Не психолог, не коуч, не шаман.
               </p>
               <p className="text-lg md:text-xl text-warm-text/80 mb-4">
-                Я прошёл через это сам — страх, обнуление, потерю смысла.
+                Прошёл через это сам — страх, обнуление, потерю смысла.
               </p>
               <p className="text-lg md:text-xl text-warm-accent font-semibold">
                 И теперь сопровождаю других.
