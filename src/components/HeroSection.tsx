@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -8,7 +9,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-24 md:pb-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-32 sm:pb-24 md:pb-16 lg:pb-8 xl:pb-0 min-h-[760px]:pb-0">
       {/* Добавляем текстуру через псевдоэлемент */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
       
@@ -43,7 +44,7 @@ const HeroSection = () => {
             Мы встретимся, чтобы это изменить.
           </h2>
 
-          <div className="mb-8 md:mb-0">
+          <div className="mb-8">
             <Button 
               onClick={scrollToContact}
               className="text-white px-16 py-8 text-xl font-medium rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 hover:translate-y-[-2px] animate-scale-in border-none backdrop-blur-sm"
