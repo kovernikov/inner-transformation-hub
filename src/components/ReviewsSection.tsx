@@ -97,6 +97,11 @@ const ReviewsSection = () => {
       id: 17,
       quote: "Ясность в жизненных решениях",
       videoId: "5BVLq1r9OIQ"
+    },
+    {
+      id: 18,
+      quote: "Возвращение к своей истинной природе",
+      videoId: "Yq4_GEV_-YQ"
     }
   ];
 
