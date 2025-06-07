@@ -147,7 +147,7 @@ const ProgramsSection = () => {
         <div className="text-center mt-12 animate-on-scroll animate-pulse-subtle">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold text-warm-text mb-6">
-              Я — <span className="text-warm-accent">Алексей Коверников</span>
+              <span className="text-warm-accent">Алексей Коверников</span>
             </h2>
             <h3 className="text-2xl md:text-3xl font-medium text-warm-accent mb-6">
               Проводник внутренней трансформации
