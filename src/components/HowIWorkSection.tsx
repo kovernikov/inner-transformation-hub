@@ -34,13 +34,13 @@ const HowIWorkSection = () => {
           <div className="mb-12 animate-on-scroll">
             <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg animate-pulse-subtle">
               <p className="text-xl md:text-2xl text-warm-text mb-6 font-medium">
-                Не психолог, не коуч, не шаман.
+                Помощь без наставничества.
               </p>
               <p className="text-lg md:text-xl text-warm-text/80 mb-4">
-                Прошёл через это сам — страх, обнуление, потерю смысла.
+                Поддержка без давления.
               </p>
               <p className="text-lg md:text-xl text-warm-accent font-semibold">
-                И теперь сопровождаю других.
+                Путь без шаблонов — только внутренняя честность и внимание.
               </p>
             </div>
           </div>
