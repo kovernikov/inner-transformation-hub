@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fog Hero Block</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .fog-hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+            font-family: 'Manrope', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fog-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .fog-layer {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle at center, 
+                rgba(255, 255, 255, 0.8) 0%, 
+                rgba(248, 249, 250, 0.6) 30%, 
+                rgba(233, 236, 239, 0.4) 60%, 
+                transparent 100%);
+            border-radius: 50%;
+            filter: blur(2px);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .fog-layer:nth-child(1) {
+            top: -10%;
+            left: -10%;
+            animation-delay: 0s;
+            transform: scale(1.2);
+        }
+
+        .fog-layer:nth-child(2) {
+            top: -20%;
+            right: -10%;
+            animation-delay: -7s;
+            transform: scale(0.8);
+            animation-duration: 25s;
+        }
+
+        .fog-layer:nth-child(3) {
+            bottom: -15%;
+            left: -5%;
+            animation-delay: -14s;
+            transform: scale(1.5);
+            animation-duration: 30s;
+        }
+
+        .fog-layer:nth-child(4) {
+            top: 30%;
+            left: 60%;
+            animation-delay: -3s;
+            transform: scale(0.6);
+            animation-duration: 18s;
+        }
+
+        .fog-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: drift 15s linear infinite;
+        }
+
+        .particle:nth-child(odd) {
+            animation-direction: reverse;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+            transition: all 0.6s ease;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            transition: all 0.8s ease;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            font-weight: 400;
+            color: #6c757d;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            transition: all 0.8s ease;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: #495057;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        /* Scroll-triggered fog parting effect */
+        .fog-parted .fog-layer {
+            opacity: 0.3;
+            transform: scale(0.8) translateY(-50px);
+        }
+
+        .fog-parted .hero-content {
+            transform: translateY(-20px);
+        }
+
+        .fog-parted .hero-title {
+            text-shadow: 0 0 30px rgba(255, 255, 255, 1);
+            color: #343a40;
+        }
+
+        .fog-parted .hero-subtitle {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            color: #495057;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateX(0) translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateX(20px) translateY(-15px) rotate(1deg);
+            }
+            50% {
+                transform: translateX(-10px) translateY(-25px) rotate(-0.5deg);
+            }
+            75% {
+                transform: translateX(-25px) translateY(-10px) rotate(0.5deg);
+            }
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero-title {
+                margin-bottom: 1rem;
+            }
+            
+            .hero-subtitle {
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero-cta {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fog-hero" id="fogHero">
+        <!-- Fog layers -->
+        <div class="fog-container">
+            <div class="fog-layer"></div>
+            <div class="fog-layer"></div>
+            <div class="fog-layer"></div>
+            <div class="fog-layer"></div>
+        </div>
+
+        <!-- Floating particles -->
+        <div class="fog-particles" id="fogParticles"></div>
+
+        <!-- Hero content -->
+        <div class="hero-content">
+            <h1 class="hero-title">Emerge from the Mist</h1>
+            <p class="hero-subtitle">Discover clarity in the fog of possibilities. Your journey begins with a single scroll.</p>
+            <a href="#next-section" class="hero-cta">Begin Journey</a>
+        </div>
+    </div>
+
+    <!-- Demo content below hero -->
+    <div style="height: 200vh; background: linear-gradient(to bottom, #f8f9fa, #e9ecef); padding: 4rem 2rem; text-align: center; font-family: 'Manrope', sans-serif;">
+        <h2 style="color: #495057; margin-bottom: 2rem; font-size: 2.5rem;">Continue scrolling to see the effect</h2>
+        <p style="color: #6c757d; font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+            The fog effect responds to scroll position, creating an immersive experience as users navigate through your content.
+        </p>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('fogParticles');
+            const particleCount = 15;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random size and position
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Scroll-triggered fog parting effect
+        function handleScroll() {
+            const hero = document.getElementById('fogHero');
+            const scrollPosition = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+            const threshold = windowHeight * 0.3;
+
+            if (scrollPosition > threshold) {
+                hero.classList.add('fog-parted');
+            } else {
+                hero.classList.remove('fog-parted');
+            }
+
+            // Parallax effect for fog layers
+            const fogLayers = document.querySelectorAll('.fog-layer');
+            const scrollFactor = scrollPosition * 0.5;
+            
+            fogLayers.forEach((layer, index) => {
+                const speed = (index + 1) * 0.3;
+                layer.style.transform = `translateY(${scrollFactor * speed}px) scale(${1 + index * 0.2})`;
+            });
+        }
+
+        // Smooth scroll for CTA button
+        function initSmoothScroll() {
+            const ctaButton = document.querySelector('.hero-cta');
+            ctaButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            initSmoothScroll();
+            
+            // Throttled scroll handler for better performance
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(handleScroll);
+                    ticking = true;
+                    setTimeout(() => { ticking = false; }, 16);
+                }
+            }
+            
+            window.addEventListener('scroll', requestTick);
+            
+            // Initial call
+            handleScroll();
+        });
+
+        // Intersection Observer for additional effects
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -10% 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe hero content for entrance animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroContent = document.querySelector('.hero-content');
+            heroContent.style.opacity = '0';
+            heroContent.style.transform = 'translateY(30px)';
+            heroContent.style.transition = 'all 1s ease-out';
+            
+            setTimeout(() => {
+                heroContent.style.opacity = '1';
+                heroContent.style.transform = 'translateY(0)';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
