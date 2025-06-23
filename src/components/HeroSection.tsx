@@ -17,7 +17,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto animate-on-scroll animate-pulse-subtle">
           <div className="mb-12 animate-scale-in">
             <img 
-              src="/lovable-uploads/ea6b2874-1643-4673-9127-e5fac679b4c2.png"
+              src="/lovable-uploads/80b0808d-bb31-4e54-aea7-b694b49ebe1b.png"
               alt="Алексей Коверников — проводник внутренней трансформации и специалист по гипнотерапии"
               className="w-56 h-56 md:w-72 md:h-72 mx-auto rounded-full object-cover shadow-2xl border-4 border-white/80 transition-all duration-500 hover:scale-105 hover:shadow-3xl"
               style={{
