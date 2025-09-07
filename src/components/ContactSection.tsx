@@ -6,8 +6,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { Send, Calendar, Bookmark, Heart } from 'lucide-react';
 
-const ContactSection = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+const ContactSection: React.FC = () => {
+  const [formData, setFormData] = useState<{ name: string; email: string; message: string }>({
+    name: '',
+    email: '',
+    message: ''
+  });
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -19,19 +23,32 @@ const ContactSection = () => {
         body: new URLSearchParams(formData as any).toString(),
       });
       const result = await response.text();
+
       if (result.includes('OK')) {
-        toast({ title: 'Сообщение отправлено!', description: 'Алексей свяжется с вами в ближайшее время.' });
+        toast({
+          title: 'Сообщение отправлено!',
+          description: 'Алексей свяжется с вами в ближайшее время.',
+        });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        toast({ title: 'Ошибка', description: 'Не удалось отправить сообщение. Попробуйте позже.', variant: 'destructive' });
+        toast({
+          title: 'Ошибка',
+          description: 'Не удалось отправить сообщение. Попробуйте позже.',
+          variant: 'destructive',
+        });
       }
     } catch {
-      toast({ title: 'Ошибка', description: 'Сервер недоступен. Проверьте соединение.', variant: 'destructive' });
+      toast({
+        title: 'Ошибка',
+        description: 'Сервер недоступен. Проверьте соединение.',
+        variant: 'destructive',
+      });
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
     <section id="contact" className="py-20">
@@ -48,9 +65,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        {/* ГРИД: левая карточка (форма), правая карточка (запись), третьим элементом — донат */}
+        {/* ГРИД: 1) форма, 2) запись на встречу, 3) донат под правой карточкой */}
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          {/* ФОРМА */}
+          {/* 1) Форма */}
           <Card className="shadow-2xl border-0 bg-white/40 backdrop-blur-sm animate-on-scroll animate-pulse-subtle">
             <CardHeader className="relative">
               <div className="absolute top-4 right-4">
@@ -104,7 +121,7 @@ const ContactSection = () => {
             </CardContent>
           </Card>
 
-          {/* ЗАПИСЬ НА ВСТРЕЧУ */}
+          {/* 2) Запись на встречу */}
           <div className="space-y-6 animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '0.3s' }}>
             <Card className="shadow-2xl border-0 bg-warm-green/60 backdrop-blur-sm text-warm-text">
               <CardContent className="p-8 text-center">
@@ -135,18 +152,19 @@ const ContactSection = () => {
             </Card>
           </div>
 
-          {/* ДОНАТ — ПОД ПРАВОЙ КАРТОЧКОЙ */}
-          <div className="md:col-start-2 flex justify-center md:justify-end">
+          {/* 3) Донат Stripe — под правой карточкой */}
+          <div className="md:col-start-2 flex justify-center md:justify-end md:-mt-2">
             <a
               href="https://buy.stripe.com/28EcN4gNTgRG3F33lCf7i01"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-lg px-8 py-3 font-semibold text-white transition-colors duration-300 transform hover:scale-105"
               style={{ backgroundColor: '#4A90A4' }}
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#3A7A94')}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#4A90A4')}
+              aria-label="Поддержать проект — оплата через Stripe"
             >
-              <Heart className="w-5 h-5 mr-2" />
+              <Heart className="w-5 h-5" />
               Поддержать проект
             </a>
           </div>
