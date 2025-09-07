@@ -42,7 +42,7 @@ const AboutSection = () => {
           {/* SEO-блок с вопросами */}
           <div className="text-center mb-12 animate-on-scroll">
             <h2 className="text-2xl md:text-3xl font-semibold text-warm-text mb-8 animate-pulse-subtle">
-              С чем приходят ко мне
+              С чем приходят
             </h2>
             <div className="space-y-4">
               {clientQuestions.map((question, index) => (
