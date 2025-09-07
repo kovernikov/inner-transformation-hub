@@ -40,7 +40,7 @@ const WhatIDoSection = () => {
           {/* Кому помогаю */}
           <div className="mb-8 animate-on-scroll animate-pulse-subtle">
             <h3 className="text-xl md:text-2xl font-semibold text-warm-text mb-4 text-center animate-pulse-subtle">
-              Работа с людьми, которые:
+              Сначала видеть, потом делать.
             </h3>
             <div className="grid md:grid-cols-2 gap-3 max-w-3xl mx-auto">
               {issues.map((issue, index) => (
