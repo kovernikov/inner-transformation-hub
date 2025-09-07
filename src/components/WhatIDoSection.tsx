@@ -3,10 +3,10 @@ import React from 'react';
 
 const WhatIDoSection = () => {
   const issues = [
-    "застряли в отношениях и не могут выбраться",
-    "живут чужими ожиданиями", 
-    "устали от чувства вины, страха, одиночества",
-    "хотят вернуть силу, но не знают, с чего начать"
+    "Ясность: я — не история в голове; понимаю, как хочу жить.",
+    "Присутствие: возвращение в тишину внимания.", 
+    "Свобода выбора: замечаю импульс до реакции и отвечаю осознанно.",
+    "Опора: ощущение «я есть» вместо роли."
   ];
 
   const approaches = [
@@ -29,8 +29,8 @@ const WhatIDoSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 animate-on-scroll animate-pulse-subtle">
           <h2 className="text-3xl md:text-4xl font-bold text-warm-text mb-6 animate-pulse-subtle">
-            Что <span className="text-warm-accent relative inline-block">
-              делаю
+            <span className="text-warm-accent relative inline-block">
+              Что получите
               <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-warm-accent to-warm-blue"></div>
             </span>
           </h2>
