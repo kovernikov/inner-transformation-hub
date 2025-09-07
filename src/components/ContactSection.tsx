@@ -173,21 +173,6 @@ const ContactSection = () => {
               </CardContent>
             </Card>
           </div>
-          {/* Донат Stripe — под правой карточкой */}
-<div className="md:col-start-2 flex justify-center md:justify-end">
-  <a
-    href="https://buy.stripe.com/28EcN4gNTgRG3F33lCf7i01"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105"
-    style={{ backgroundColor: '#4A90A4' }}
-    onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#3A7A94'; }}
-    onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#4A90A4'; }}
-  >
-    <Heart className="w-5 h-5 mr-2" />
-    Поддержать проект
-  </a>
-</div>
         </div>
       </div>
     </section>
