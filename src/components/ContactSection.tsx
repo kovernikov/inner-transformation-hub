@@ -46,9 +46,8 @@ const ContactSection: React.FC = () => {
     }
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
     <section id="contact" className="py-20">
@@ -65,7 +64,7 @@ const ContactSection: React.FC = () => {
           </p>
         </div>
 
-        {/* ГРИД: 1) форма, 2) запись на встречу, 3) донат под правой карточкой */}
+        {/* ГРИД: 1) форма, 2) запись на встречу */}
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {/* 1) Форма */}
           <Card className="shadow-2xl border-0 bg-white/40 backdrop-blur-sm animate-on-scroll animate-pulse-subtle">
@@ -121,7 +120,7 @@ const ContactSection: React.FC = () => {
             </CardContent>
           </Card>
 
-          {/* 2) Запись на встречу */}
+          {/* 2) Запись на встречу + Донат внутри карточки */}
           <div className="space-y-6 animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '0.3s' }}>
             <Card className="shadow-2xl border-0 bg-warm-green/60 backdrop-blur-sm text-warm-text">
               <CardContent className="p-8 text-center">
@@ -136,6 +135,8 @@ const ContactSection: React.FC = () => {
                       личной консультации
                     </span>
                   </p>
+
+                  {/* Кнопка записи */}
                   <a
                     href="https://koalendar.com/e/diagnostika"
                     data-koalendar-widget
@@ -147,26 +148,26 @@ const ContactSection: React.FC = () => {
                     <Calendar className="w-5 h-5 mr-2" />
                     Запланировать встречу
                   </a>
+
+                  {/* Кнопка доната Stripe — сразу под записью */}
+                  <div className="mt-4 flex justify-center">
+                    <a
+                      href="https://buy.stripe.com/28EcN4gNTgRG3F33lCf7i01"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-lg px-8 py-3 font-semibold text-white transition-colors duration-300 transform hover:scale-105"
+                      style={{ backgroundColor: '#4A90A4' }}
+                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#3A7A94')}
+                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#4A90A4')}
+                      aria-label="Поддержать проект — оплата через Stripe"
+                    >
+                      <Heart className="w-5 h-5" />
+                      Поддержать проект
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
-          </div>
-
-          {/* 3) Донат Stripe — под правой карточкой */}
-          <div className="md:col-start-2 flex justify-center md:justify-end md:-mt-2">
-            <a
-              href="https://buy.stripe.com/28EcN4gNTgRG3F33lCf7i01"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg px-8 py-3 font-semibold text-white transition-colors duration-300 transform hover:scale-105"
-              style={{ backgroundColor: '#4A90A4' }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#3A7A94')}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#4A90A4')}
-              aria-label="Поддержать проект — оплата через Stripe"
-            >
-              <Heart className="w-5 h-5" />
-              Поддержать проект
-            </a>
           </div>
         </div>
       </div>
