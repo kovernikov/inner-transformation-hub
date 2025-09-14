@@ -65,9 +65,9 @@ const ContactSection: React.FC = () => {
         </div>
 
         {/* ГРИД: 1) форма, 2) запись на встречу */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto items-stretch">
           {/* 1) Форма */}
-          <Card className="shadow-2xl border-0 bg-white/40 backdrop-blur-sm animate-on-scroll animate-pulse-subtle">
+          <Card className="shadow-2xl border-0 bg-white/40 backdrop-blur-sm animate-on-scroll animate-pulse-subtle h-full flex flex-col md:min-h-[560px]">
             <CardHeader className="relative">
               <div className="absolute top-4 right-4">
                 <Bookmark className="w-6 h-6 text-warm-accent/60" />
@@ -77,8 +77,8 @@ const ContactSection: React.FC = () => {
                 Написать сообщение
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <CardContent className="flex-1 flex flex-col">
+              <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
                 <Input
                   type="text"
                   name="name"
@@ -104,7 +104,7 @@ const ContactSection: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="text-lg border-warm-accent/30 focus:border-warm-accent resize-none bg-white/60"
+                  className="text-lg border-warm-accent/30 focus:border-warm-accent resize-none bg-white/60 flex-1"
                 />
                 <Button
                   type="submit"
@@ -121,9 +121,9 @@ const ContactSection: React.FC = () => {
           </Card>
 
           {/* 2) Запись на встречу + Донат внутри карточки */}
-          <div className="space-y-6 animate-on-scroll animate-pulse-subtle" style={{ animationDelay: '0.3s' }}>
-            <Card className="shadow-2xl border-0 bg-warm-green/60 backdrop-blur-sm text-warm-text">
-              <CardContent className="p-8 text-center">
+          <div className="space-y-6 animate-on-scroll animate-pulse-subtle h-full" style={{ animationDelay: '0.3s' }}>
+            <Card className="shadow-2xl border-0 bg-warm-green/60 backdrop-blur-sm text-warm-text h-full flex flex-col md:min-h-[560px]">
+              <CardContent className="p-8 text-center flex-1 flex flex-col">
                 <div className="mb-6">
                   <div className="w-20 h-20 bg-warm-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Calendar className="w-10 h-10 text-warm-accent" />
@@ -166,6 +166,8 @@ const ContactSection: React.FC = () => {
                     </a>
                   </div>
                 </div>
+                {/* растяжка контента, чтобы нижняя тень была одинаковая */}
+                <div className="flex-1" />
               </CardContent>
             </Card>
           </div>
