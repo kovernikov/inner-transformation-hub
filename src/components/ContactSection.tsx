@@ -149,8 +149,14 @@ const ContactSection: React.FC = () => {
                     Запланировать встречу
                   </a>
 
-                  {/* Кнопка доната Stripe — сразу под записью */}
-                  <div className="mt-4 flex justify-center">
+                  {/* Пояснение к донату */}
+                  <div className="mt-4 text-sm text-warm-text/80 text-center flex items-start justify-center gap-2">
+                    <Heart className="w-4 h-4 mt-0.5 text-warm-accent" />
+                    <span>Ваш вклад помогает развивать проект: новые материалы и практики.</span>
+                  </div>
+
+                  {/* Кнопка доната Stripe — сразу под пояснением */}
+                  <div className="mt-3 flex justify-center">
                     <a
                       href="https://donate.stripe.com/7sY3cvfejfig9sH7lU0RG00"
                       target="_blank"
@@ -166,7 +172,6 @@ const ContactSection: React.FC = () => {
                     </a>
                   </div>
                 </div>
-                {/* растяжка контента, чтобы нижняя тень была одинаковая */}
                 <div className="flex-1" />
               </CardContent>
             </Card>
