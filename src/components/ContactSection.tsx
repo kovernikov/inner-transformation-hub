@@ -152,7 +152,7 @@ const ContactSection: React.FC = () => {
                   {/* Кнопка доната Stripe — сразу под записью */}
                   <div className="mt-4 flex justify-center">
                     <a
-                      href="https://buy.stripe.com/28EcN4gNTgRG3F33lCf7i01"
+                      href="https://donate.stripe.com/7sY3cvfejfig9sH7lU0RG00"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-lg px-8 py-3 font-semibold text-white transition-colors duration-300 transform hover:scale-105"
